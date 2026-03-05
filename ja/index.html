@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RocketMouse AI — Mac史上最強のRPAツール</title>
+  <meta name="description" content="macOS向け最強のビジュアルRPA自動化ツール。169種類の操作、AI搭載、ブロックエディタ。コーディング不要で何でも自動化。">
+  <meta name="theme-color" content="#06060a">
+  <link rel="canonical" href="https://mojosoftjp.github.io/rocketmouse/ja/">
+  <link rel="alternate" hreflang="en" href="https://mojosoftjp.github.io/rocketmouse/">
+  <link rel="alternate" hreflang="ja" href="https://mojosoftjp.github.io/rocketmouse/ja/">
+  <meta property="og:title" content="RocketMouse AI — Mac史上最強のRPA自動化ツール">
+  <meta property="og:description" content="Mac向け最強のビジュアルRPA自動化ツール。169のオペレーション、AIコパイロット、ブロックベースエディタ。あらゆる作業を自動化。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mojosoftjp.github.io/rocketmouse/ja/">
+  <meta property="og:image" content="https://mojosoftjp.github.io/rocketmouse/images/og-image.png">
+  <meta property="og:site_name" content="RocketMouse AI">
+  <meta property="og:locale" content="ja_JP">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="RocketMouse AI — Mac史上最強のRPA自動化ツール">
+  <meta name="twitter:description" content="Mac向け最強のビジュアルRPA自動化ツール。169のオペレーション、AIコパイロット、ブロックベースエディタ。あらゆる作業を自動化。">
+  <meta name="twitter:image" content="https://mojosoftjp.github.io/rocketmouse/images/og-image.png">
+  <link rel="apple-touch-icon" href="../images/app-icon-256.png">
+  <link rel="icon" type="image/png" href="../images/app-icon-128.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <style>body { font-family: 'Noto Sans JP', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }</style>
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__brand">
+        <img src="../images/app-icon-128.png" alt="RocketMouse AI" width="32" height="32">
+        <span>RocketMouse AI</span>
+      </a>
+
+      <ul class="nav__links">
+        <li><a href="index.html" class="active">ホーム</a></li>
+        <li><a href="download.html">ダウンロード</a></li>
+        <li><a href="pricing.html">価格</a></li>
+        <li><a href="help.html">ヘルプ</a></li>
+        <li><a href="releases.html">リリース</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+
+      <div class="nav__cta">
+        <a href="download.html" class="btn btn--primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          ダウンロード
+        </a>
+        <div class="lang-switch">
+          <a href="../index.html" class="lang-switch__btn">EN</a>
+          <a href="index.html" class="lang-switch__btn active">JA</a>
+        </div>
+      </div>
+
+      <button class="nav__toggle" aria-label="メニューを開く" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 12h18M3 6h18M3 18h18"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="hero__bg">
+      <div class="hero__grid"></div>
+      <div class="hero__stars"></div>
+      <div class="hero__aurora"></div>
+      <div class="shooting-star shooting-star--1"></div>
+      <div class="shooting-star shooting-star--2"></div>
+      <div class="shooting-star shooting-star--3"></div>
+    </div>
+
+    <div class="hero__content">
+      <!-- App Icon with glow -->
+      <div class="hero-icon reveal">
+        <div class="hero-icon__glow"></div>
+        <img src="../images/app-icon.png" alt="RocketMouse AI" class="hero-icon__img" width="140" height="140">
+      </div>
+
+      <div class="hero__badge reveal reveal-delay-1">
+        <span class="badge">
+          <span class="badge__dot"></span>
+          macOS版 ついに登場
+        </span>
+      </div>
+
+      <h1 class="hero__title reveal reveal-delay-2">
+        <span class="line">Macの</span>
+        <span class="line"><span class="text-gradient">すべてを</span></span>
+        <span class="line">自動化する</span>
+      </h1>
+
+      <p class="hero__subtitle reveal reveal-delay-3">
+        Mac史上最強のビジュアルRPAツール。
+        169種類の操作。AI搭載。コーディング不要。
+      </p>
+
+      <div class="hero__actions reveal reveal-delay-4">
+        <a href="download.html" class="btn btn--primary btn--large">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          無料トライアルをダウンロード
+        </a>
+        <a href="#features" class="btn btn--secondary btn--large">
+          機能を見る
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="hero__meta reveal reveal-delay-5">
+        <span class="hero__meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          macOS 14以降
+        </span>
+        <span class="hero__meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Apple公証済み
+        </span>
+        <span class="hero__meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          日本語 &amp; 英語
+        </span>
+      </div>
+    </div>
+
+    <!-- Window Mockup -->
+    <div class="hero__window reveal-scale reveal-delay-3">
+      <div class="window-frame">
+        <div class="window-frame__titlebar">
+          <span class="window-dot window-dot--red"></span>
+          <span class="window-dot window-dot--yellow"></span>
+          <span class="window-dot window-dot--green"></span>
+          <span class="window-frame__title">RocketMouse AI — 無題.rmproj</span>
+        </div>
+        <div class="window-frame__body">
+          <div class="block-editor-mock">
+            <div class="block-palette-mock">
+              <div class="palette-category" style="background: #4C97FF;">マウス</div>
+              <div class="palette-category" style="background: #9966FF;">キーボード</div>
+              <div class="palette-category" style="background: #FFAB19;">制御</div>
+              <div class="palette-category" style="background: #40BF4A;">データ</div>
+              <div class="palette-category" style="background: #FF6680;">ブラウザ</div>
+              <div class="palette-category" style="background: #5CB1D6;">AI</div>
+              <div class="palette-category" style="background: #CF63CF;">Excel</div>
+              <div class="palette-category" style="background: #FF8C1A;">ファイル</div>
+              <div class="palette-category" style="background: #4CBB17;">ウィンドウ</div>
+            </div>
+            <div class="block-workspace-mock">
+              <div class="mock-block" style="background: #FFAB19; border-radius: 8px 8px 8px 4px;">
+                <span class="reporter">開始</span> がクリックされたとき
+              </div>
+              <div class="mock-block" style="background: #FF6680;">
+                ブラウザを開く <input type="text" value="https://..." readonly>
+              </div>
+              <div class="mock-block" style="background: #5CB1D6;">
+                ページ読み込みを待機
+              </div>
+              <div class="mock-block" style="background: #FFAB19; border-radius: 8px;">
+                <span class="reporter">10</span> 回繰り返す
+              </div>
+              <div class="mock-block mock-block--indent" style="background: #FF6680;">
+                要素をクリック <input type="text" value="#submit" readonly>
+              </div>
+              <div class="mock-block mock-block--indent" style="background: #40BF4A;">
+                <span class="reporter">result</span> を <span class="reporter">テキスト</span> に設定
+              </div>
+              <div class="mock-block mock-block--indent" style="background: #CF63CF;">
+                Excelに書込み <span class="reporter">A1</span>
+              </div>
+              <div class="mock-block" style="background: #5CB1D6;">
+                AI: 結果を分析
+              </div>
+              <div class="mock-block" style="background: #4CBB17; border-radius: 4px 4px 8px 8px;">
+                メッセージ表示 <input type="text" value="完了！" readonly>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== STATS BAR ========== -->
+  <div class="stats-bar reveal">
+    <div class="stat">
+      <div class="stat__number text-gradient-blue" data-count="169" data-suffix="+">0+</div>
+      <div class="stat__label">操作</div>
+    </div>
+    <div class="stat">
+      <div class="stat__number text-gradient-blue" data-count="24">0</div>
+      <div class="stat__label">カテゴリ</div>
+    </div>
+    <div class="stat">
+      <div class="stat__number text-gradient-blue" data-count="7">0</div>
+      <div class="stat__label">ブロック形状</div>
+    </div>
+    <div class="stat">
+      <div class="stat__number text-gradient-blue" data-count="5">0</div>
+      <div class="stat__label">AIプロバイダ</div>
+    </div>
+  </div>
+
+
+  <!-- ========== FEATURES ========== -->
+  <section class="section" id="features">
+    <div class="section__header reveal">
+      <div class="section__overline">機能</div>
+      <h2 class="section__title">Macの自動化に<br><span class="text-gradient">必要なすべて</span></h2>
+      <p class="section__desc">
+        シンプルなマウスクリックから複雑なAI駆動ワークフローまで。
+        RocketMouse AIがあなたにスーパーパワーを与えます。
+      </p>
+    </div>
+
+    <div class="bento-grid">
+      <!-- Visual Block Editor -->
+      <div class="bento-card bento-card--wide reveal">
+        <div class="bento-card__icon bento-card__icon--blue">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        </div>
+        <h3 class="bento-card__title">ビジュアルブロックエディタ</h3>
+        <p class="bento-card__desc">
+          ブロックをスナップするだけで自動化フローを構築。7種類のブロック形状、色分けされたカテゴリ、
+          ドラッグ&ドロップ、元に戻す/やり直し、ミニマップナビゲーション、自然言語表示。
+          プログラミング経験不要。
+        </p>
+      </div>
+
+      <!-- AI Copilot -->
+      <div class="bento-card reveal reveal-delay-1">
+        <div class="bento-card__icon bento-card__icon--purple">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3 class="bento-card__title">AI Copilot</h3>
+        <p class="bento-card__desc">
+          やりたいことを日本語で説明するだけ。AIがマクロを自動生成。
+          OpenAI、Anthropic、Google等に対応。
+        </p>
+      </div>
+
+      <!-- Browser Automation -->
+      <div class="bento-card reveal reveal-delay-1">
+        <div class="bento-card__icon bento-card__icon--pink">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        </div>
+        <h3 class="bento-card__title">ブラウザ自動化</h3>
+        <p class="bento-card__desc">
+          Playwright + Chromeを内蔵。ナビゲーション、クリック、フォーム入力、データ抽出、
+          スクリプト実行 — すべてビジュアルブロックから。
+        </p>
+      </div>
+
+      <!-- Excel & Files -->
+      <div class="bento-card reveal">
+        <div class="bento-card__icon bento-card__icon--green">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h3 class="bento-card__title">Excel &amp; ファイル操作</h3>
+        <p class="bento-card__desc">
+          Excelファイルをネイティブに読み書き。18種類のスプレッドシート操作に加え、ファイルシステムへの完全アクセス — コピー、移動、作成、アーカイブ。
+        </p>
+      </div>
+
+      <!-- Vision & OCR -->
+      <div class="bento-card reveal reveal-delay-1">
+        <div class="bento-card__icon bento-card__icon--cyan">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h3 class="bento-card__title">画像認識 &amp; OCR</h3>
+        <p class="bento-card__desc">
+          Apple Visionフレームワークが画像認識、テンプレートマッチング、OCRテキスト抽出を実現。
+          画面上の何でも見つけます。
+        </p>
+      </div>
+
+      <!-- Macro Recording -->
+      <div class="bento-card bento-card--wide reveal reveal-delay-2">
+        <div class="bento-card__icon bento-card__icon--orange">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3" fill="currentColor"/></svg>
+        </div>
+        <h3 class="bento-card__title">記録 &amp; 再生</h3>
+        <p class="bento-card__desc">
+          記録ボタンを押してタスクを実行するだけ。RocketMouseがすべてのマウスクリックとキー入力をキャプチャし、
+          編集可能なブロックを生成。ブレークポイントとステップ実行でデバッグも万全。
+        </p>
+      </div>
+
+      <!-- Cross-Platform -->
+      <div class="bento-card reveal">
+        <div class="bento-card__icon bento-card__icon--blue">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3 class="bento-card__title">クロスプラットフォーム</h3>
+        <p class="bento-card__desc">
+          .rmprojファイルはmacOSとWindows間で完全互換。
+          Macで作って、Windowsで実行 — その逆も。
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <hr class="glow-line">
+
+
+  <!-- ========== BLOCK SHAPES ========== -->
+  <section class="section section--alt">
+    <div class="section__header reveal">
+      <div class="section__overline">ブロックシステム</div>
+      <h2 class="section__title">7つのブロック形状。<br>無限の可能性。</h2>
+      <p class="section__desc">
+        各形状は異なる種類の操作を表します。
+        スナップするだけで複雑な自動化をビジュアルに構築。
+      </p>
+    </div>
+
+    <div class="shapes-showcase">
+      <div class="shape-item reveal">
+        <div class="shape-item__visual">
+          <svg width="100" height="40" viewBox="0 0 100 40">
+            <rect x="2" y="2" width="96" height="36" rx="6" fill="#4C97FF" opacity="0.9"/>
+            <text x="50" y="25" text-anchor="middle" fill="white" font-size="12" font-weight="600">Stack</text>
+          </svg>
+        </div>
+        <div class="shape-item__name">スタック</div>
+        <div class="shape-item__desc">基本アクション</div>
+      </div>
+
+      <div class="shape-item reveal reveal-delay-1">
+        <div class="shape-item__visual">
+          <svg width="100" height="50" viewBox="0 0 100 50">
+            <path d="M20 2 L80 2 Q96 2 96 12 L96 46 Q96 48 94 48 L6 48 Q4 48 4 46 L4 12 Q4 2 20 2 Z" fill="#FFAB19" opacity="0.9"/>
+            <path d="M30 2 Q50 -8 70 2" fill="#FFAB19" stroke="none"/>
+            <text x="50" y="32" text-anchor="middle" fill="white" font-size="12" font-weight="600">Hat</text>
+          </svg>
+        </div>
+        <div class="shape-item__name">ハット</div>
+        <div class="shape-item__desc">イベントトリガー</div>
+      </div>
+
+      <div class="shape-item reveal reveal-delay-2">
+        <div class="shape-item__visual">
+          <svg width="100" height="50" viewBox="0 0 100 50">
+            <path d="M2 6 Q2 2 6 2 L94 2 Q98 2 98 6 L98 22 L80 22 L80 38 L30 38 L30 22 L2 22 Z" fill="#FFAB19" opacity="0.9"/>
+            <rect x="2" y="40" width="96" height="8" rx="3" fill="#FFAB19" opacity="0.7"/>
+            <text x="50" y="16" text-anchor="middle" fill="white" font-size="11" font-weight="600">C-Block</text>
+          </svg>
+        </div>
+        <div class="shape-item__name">Cブロック</div>
+        <div class="shape-item__desc">ループ / 分岐</div>
+      </div>
+
+      <div class="shape-item reveal reveal-delay-3">
+        <div class="shape-item__visual">
+          <svg width="100" height="40" viewBox="0 0 100 40">
+            <rect x="2" y="2" width="96" height="36" rx="18" fill="#40BF4A" opacity="0.9"/>
+            <text x="50" y="25" text-anchor="middle" fill="white" font-size="11" font-weight="600">Reporter</text>
+          </svg>
+        </div>
+        <div class="shape-item__name">レポーター</div>
+        <div class="shape-item__desc">値を返す</div>
+      </div>
+
+      <div class="shape-item reveal reveal-delay-4">
+        <div class="shape-item__visual">
+          <svg width="100" height="40" viewBox="0 0 100 40">
+            <polygon points="20,20 50,2 80,20 50,38" fill="#5CB1D6" opacity="0.9" transform="scale(1.2) translate(-8, -3)"/>
+            <text x="50" y="25" text-anchor="middle" fill="white" font-size="11" font-weight="600">Boolean</text>
+          </svg>
+        </div>
+        <div class="shape-item__name">ブーリアン</div>
+        <div class="shape-item__desc">真 / 偽</div>
+      </div>
+
+      <div class="shape-item reveal reveal-delay-5">
+        <div class="shape-item__visual">
+          <svg width="100" height="40" viewBox="0 0 100 40">
+            <rect x="2" y="2" width="96" height="36" rx="6" fill="#FF4D6A" opacity="0.9"/>
+            <rect x="2" y="32" width="96" height="6" rx="3" fill="#CC3D55" opacity="0.9"/>
+            <text x="50" y="24" text-anchor="middle" fill="white" font-size="12" font-weight="600">Cap</text>
+          </svg>
+        </div>
+        <div class="shape-item__name">キャップ</div>
+        <div class="shape-item__desc">終了点</div>
+      </div>
+
+      <div class="shape-item reveal reveal-delay-5">
+        <div class="shape-item__visual">
+          <svg width="100" height="55" viewBox="0 0 100 55">
+            <path d="M2 6 Q2 2 6 2 L94 2 Q98 2 98 6 L98 16 L80 16 L80 24 L30 24 L30 16 L2 16 Z" fill="#FFAB19" opacity="0.9"/>
+            <path d="M2 28 L30 28 L30 36 L80 36 L80 28 L98 28 L98 46 L2 46 Z" fill="#FFAB19" opacity="0.7"/>
+            <rect x="2" y="48" width="96" height="6" rx="3" fill="#FFAB19" opacity="0.6"/>
+            <text x="50" y="13" text-anchor="middle" fill="white" font-size="9" font-weight="600">If-Else</text>
+          </svg>
+        </div>
+        <div class="shape-item__name">If-Else</div>
+        <div class="shape-item__desc">条件分岐</div>
+      </div>
+    </div>
+  </section>
+
+
+  <hr class="glow-line">
+
+
+  <!-- ========== AI SECTION ========== -->
+  <section class="section ai-section">
+    <div class="section__header reveal">
+      <div class="section__overline" style="color: var(--accent-purple);">AI搭載</div>
+      <h2 class="section__title">あなたの自動化<br><span class="text-gradient-purple">コパイロット</span></h2>
+      <p class="section__desc">
+        やりたいワークフローを自然言語で説明するだけ。
+        お好みのLLMプロバイダーを接続してインテリジェントな自動化を。
+      </p>
+    </div>
+
+    <div class="ai-features">
+      <div class="ai-card reveal">
+        <div class="ai-card__icon">&#x1F916;</div>
+        <h3 class="ai-card__title">AIマクロ生成</h3>
+        <p class="ai-card__desc">
+          自動化したいことをAIに伝えるだけ。適切なブロック、ループ、
+          エラーハンドリングを含む完全なマクロを生成 — すぐ実行可能。
+        </p>
+      </div>
+
+      <div class="ai-card reveal reveal-delay-1">
+        <div class="ai-card__icon">&#x1F50D;</div>
+        <h3 class="ai-card__title">AIデバッグ</h3>
+        <p class="ai-card__desc">
+          問題が発生した場合、AIがマクロの状態を分析し、
+          根本原因を特定して修正案を自動提示。
+        </p>
+      </div>
+
+      <div class="ai-card reveal reveal-delay-2">
+        <div class="ai-card__icon">&#x23F1;</div>
+        <h3 class="ai-card__title">スマート待機</h3>
+        <p class="ai-card__desc">
+          固定遅延の代わりにAIが最適なタイミングを判断。
+          より高速な実行、より少ないエラー。
+        </p>
+      </div>
+    </div>
+
+    <div class="ai-providers reveal">
+      <div class="ai-provider">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+        OpenAI
+      </div>
+      <div class="ai-provider">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+        Anthropic
+      </div>
+      <div class="ai-provider">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+        Google Gemini
+      </div>
+      <div class="ai-provider">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+        Groq
+      </div>
+      <div class="ai-provider">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+        カスタムAPI
+      </div>
+    </div>
+  </section>
+
+
+  <hr class="glow-line">
+
+
+  <!-- ========== CATEGORIES ========== -->
+  <section class="section section--alt">
+    <div class="section__header reveal">
+      <div class="section__overline">操作</div>
+      <h2 class="section__title">169種類の操作。<br>24カテゴリ。</h2>
+      <p class="section__desc">
+        マウスクリックからAI指示まで、必要な自動化プリミティブをすべて内蔵。
+      </p>
+    </div>
+
+    <div class="category-grid">
+      <div class="category-item reveal">
+        <div class="category-item__color" style="background: #4C97FF;"></div>
+        <div class="category-item__info">
+          <div class="category-item__name">マウス</div>
+          <div class="category-item__count">16種類</div>
+        </div>
+      </div>
+      <div class="category-item reveal">
+        <div class="category-item__color" style="background: #9966FF;"></div>
+        <div class="category-item__info">
+          <div class="category-item__name">キーボード</div>
+          <div class="category-item__count">2種類</div>
+        </div>
+      </div>
+      <div class="category-item reveal">
+        <div class="category-item__color" style="background: #4CBB17;"></div>
+        <div class="category-item__info">
+          <div class="category-item__name">ウィンドウ</div>
+          <div class="category-item__count">8種類</div>
+        </div>
+      </div>
+      <div class="category-item reveal">
+        <div class="category-item__color" style="background: #FF6680;"></div>
+        <div class="category-item__info">
+          <div class="category-item__name">ブラウザ</div>
+          <div class="category-item__count">16種類</div>
+        </div>
+      </div>
+      <div class="category-item reveal">
+        <div class="category-item__color" style="background: #CF63CF;"></div>
+        <div class="category-item__info">
+          <div class="category-item__name">Excel</div>
+          <div class="category-item__count">18種類</div>
+        </div>
+      </div>
+      <div class="category-item reveal">
+        <div class="category-item__color" style="background: #FF8C1A;"></div>
+        <div class="category-item__info">
+          <div class="category-item__name">ファイル</div>
+          <div class="category-item__count">12種類</div>
+        </div>
+      </div>
+      <div class="category-item reveal">
+        <div class="category-item__color" style="background: #FFAB19;"></div>
+        <div class="category-item__info">
+          <div class="category-item__name">制御フロー</div>
+          <div class="category-item__count">17種類</div>
+        </div>
+      </div>
+      <div class="category-item reveal">
+        <div class="category-item__color" style="background: #40BF4A;"></div>
+        <div class="category-item__info">
+          <div class="category-item__name">データ</div>
+          <div class="category-item__count">14種類</div>
+        </div>
+      </div>
+      <div class="category-item reveal">
+        <div class="category-item__color" style="background: #FF4D6A;"></div>
+        <div class="category-item__info">
+          <div class="category-item__name">画像認識 &amp; OCR</div>
+          <div class="category-item__count">8種類</div>
+        </div>
+      </div>
+      <div class="category-item reveal">
+        <div class="category-item__color" style="background: #5CB1D6;"></div>
+        <div class="category-item__info">
+          <div class="category-item__name">AI</div>
+          <div class="category-item__count">6種類</div>
+        </div>
+      </div>
+      <div class="category-item reveal">
+        <div class="category-item__color" style="background: #0FBD8C;"></div>
+        <div class="category-item__info">
+          <div class="category-item__name">リスト</div>
+          <div class="category-item__count">8種類</div>
+        </div>
+      </div>
+      <div class="category-item reveal">
+        <div class="category-item__color" style="background: #FF6F61;"></div>
+        <div class="category-item__info">
+          <div class="category-item__name">ネットワーク</div>
+          <div class="category-item__count">3種類</div>
+        </div>
+      </div>
+      <div class="category-item reveal">
+        <div class="category-item__color" style="background: #8E8E93;"></div>
+        <div class="category-item__info">
+          <div class="category-item__name">システム</div>
+          <div class="category-item__count">13種類</div>
+        </div>
+      </div>
+      <div class="category-item reveal">
+        <div class="category-item__color" style="background: #FF2D55;"></div>
+        <div class="category-item__info">
+          <div class="category-item__name">変数</div>
+          <div class="category-item__count">5種類</div>
+        </div>
+      </div>
+      <div class="category-item reveal">
+        <div class="category-item__color" style="background: #30D158;"></div>
+        <div class="category-item__info">
+          <div class="category-item__name">待機</div>
+          <div class="category-item__count">5種類</div>
+        </div>
+      </div>
+      <div class="category-item reveal">
+        <div class="category-item__color" style="background: #BF5AF2;"></div>
+        <div class="category-item__info">
+          <div class="category-item__name">アプリケーション</div>
+          <div class="category-item__count">4種類</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-center text-secondary reveal" style="margin-top: var(--space-2xl); font-size: var(--text-sm);">
+      + テキスト、レポーター、センシング、カラー、オーディオ、ブーリアン、スクリーンキャプチャ、リモートなど8つのカテゴリも搭載
+    </p>
+  </section>
+
+
+  <!-- ========== HOW IT WORKS ========== -->
+  <section class="section">
+    <div class="section__header reveal">
+      <div class="section__overline">ワークフロー</div>
+      <h2 class="section__title">3つの構築方法</h2>
+      <p class="section__desc">
+        お好みのスタイルを選択。いずれも同じ編集可能なブロックマクロが生成されます。
+      </p>
+    </div>
+
+    <div class="bento-grid" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="bento-card reveal" style="text-align: center;">
+        <div style="font-size: 48px; margin-bottom: var(--space-lg);">&#x1F3AF;</div>
+        <h3 class="bento-card__title">ドラッグ&amp;ドロップ</h3>
+        <p class="bento-card__desc">
+          パレットからブロックを選んでスナップするだけ。
+          ビジュアル、直感的、正確。
+        </p>
+      </div>
+
+      <div class="bento-card reveal reveal-delay-1" style="text-align: center;">
+        <div style="font-size: 48px; margin-bottom: var(--space-lg);">&#x23FA;</div>
+        <h3 class="bento-card__title">記録する</h3>
+        <p class="bento-card__desc">
+          記録ボタンを押して手動でタスクを実行。
+          RocketMouseがすべてのアクションをブロックとしてキャプチャ。
+        </p>
+      </div>
+
+      <div class="bento-card reveal reveal-delay-2" style="text-align: center;">
+        <div style="font-size: 48px; margin-bottom: var(--space-lg);">&#x1F4AC;</div>
+        <h3 class="bento-card__title">AIに聞く</h3>
+        <p class="bento-card__desc">
+          ワークフローを日本語で説明するだけ。
+          AI Copilotが瞬時にマクロを生成。
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <hr class="glow-line">
+
+
+  <!-- ========== EXECUTION ENGINE ========== -->
+  <section class="section section--alt">
+    <div class="section__header reveal">
+      <div class="section__overline">エンジン</div>
+      <h2 class="section__title"><span class="text-gradient-blue">信頼性</span>を追求</h2>
+    </div>
+
+    <div class="bento-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 800px; margin: 0 auto;">
+      <div class="bento-card reveal">
+        <h3 class="bento-card__title">速度制御</h3>
+        <p class="bento-card__desc">0.1倍から5.0倍速でマクロを実行。デバッグ時は減速、本番は加速。</p>
+      </div>
+      <div class="bento-card reveal reveal-delay-1">
+        <h3 class="bento-card__title">DryRunモード</h3>
+        <p class="bento-card__desc">実際のアクションを実行せずにロジックをテスト。複雑なフローの検証に最適。</p>
+      </div>
+      <div class="bento-card reveal reveal-delay-2">
+        <h3 class="bento-card__title">ブレークポイント</h3>
+        <p class="bento-card__desc">ブレークポイントを設定し、ブロックを1つずつステップ実行、変数をリアルタイムで確認。</p>
+      </div>
+      <div class="bento-card reveal reveal-delay-3">
+        <h3 class="bento-card__title">エラーハンドリング</h3>
+        <p class="bento-card__desc">Try-Catchブロック、戻り値付きカスタム関数、コールスタック深度最大100。</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== CTA ========== -->
+  <section class="cta-section">
+    <img src="../images/app-icon.png" alt="" class="cta-icon reveal" width="80" height="80">
+    <h2 class="cta__title reveal reveal-delay-1">
+      Macの自動化を<br><span class="text-gradient">始めよう</span>
+    </h2>
+    <p class="cta__desc reveal reveal-delay-2">
+      RocketMouse AIを7日間無料でお試し。クレジットカード不要。
+    </p>
+    <div class="cta__actions reveal reveal-delay-3">
+      <a href="download.html" class="btn btn--primary btn--large">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        無料トライアルをダウンロード
+      </a>
+      <a href="pricing.html" class="btn btn--secondary btn--large">
+        価格を見る
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <img src="../images/app-icon-128.png" alt="RocketMouse AI" class="footer__brand-icon" width="48" height="48">
+        <div class="footer__brand-name">
+          RocketMouse AI
+        </div>
+        <p class="footer__brand-desc">
+          macOS向け究極のRPA自動化ツール。
+          Swiftで構築、AIで強化。
+        </p>
+      </div>
+
+      <div>
+        <h4 class="footer__col-title">製品</h4>
+        <ul class="footer__links">
+          <li><a href="download.html">ダウンロード</a></li>
+          <li><a href="pricing.html">価格</a></li>
+          <li><a href="releases.html">リリースノート</a></li>
+          <li><a href="help.html">ドキュメント</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer__col-title">リソース</h4>
+        <ul class="footer__links">
+          <li><a href="help.html">ヘルプセンター</a></li>
+          <li><a href="contact.html">お問い合わせ</a></li>
+          <li><a href="license.html">ライセンスポリシー</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer__col-title">法的情報</h4>
+        <ul class="footer__links">
+          <li><a href="license.html">利用規約</a></li>
+          <li><a href="license.html">プライバシーポリシー</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>&copy; 2026 MojoSoft. All rights reserved.</span>
+      <span>Made with &#x2764; for Mac</span>
+    </div>
+  </footer>
+
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

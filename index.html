@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RocketMouse AI — The Ultimate RPA for macOS</title>
+  <meta name="description" content="The most powerful visual RPA automation tool ever built for Mac. 169 operations, AI-powered, block-based editor. Automate anything.">
+  <meta name="theme-color" content="#06060a">
+  <link rel="canonical" href="https://mojosoftjp.github.io/rocketmouse/">
+  <link rel="alternate" hreflang="en" href="https://mojosoftjp.github.io/rocketmouse/">
+  <link rel="alternate" hreflang="ja" href="https://mojosoftjp.github.io/rocketmouse/ja/">
+  <meta property="og:title" content="RocketMouse AI — The Ultimate RPA for macOS">
+  <meta property="og:description" content="The most powerful visual RPA automation tool ever built for Mac. Automate anything with AI-powered block programming.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mojosoftjp.github.io/rocketmouse/">
+  <meta property="og:image" content="https://mojosoftjp.github.io/rocketmouse/images/og-image.png">
+  <meta property="og:site_name" content="RocketMouse AI">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="RocketMouse AI — The Ultimate RPA for macOS">
+  <meta name="twitter:description" content="The most powerful visual RPA automation tool ever built for Mac. Automate anything with AI-powered block programming.">
+  <meta name="twitter:image" content="https://mojosoftjp.github.io/rocketmouse/images/og-image.png">
+  <link rel="apple-touch-icon" href="images/app-icon-256.png">
+  <link rel="icon" type="image/png" href="images/app-icon-128.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__brand">
+        <img src="images/app-icon-128.png" alt="RocketMouse AI" width="32" height="32">
+        <span>RocketMouse AI</span>
+      </a>
+
+      <ul class="nav__links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="download.html">Download</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="help.html">Help</a></li>
+        <li><a href="releases.html">Releases</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav__cta">
+        <a href="download.html" class="btn btn--primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          Download
+        </a>
+        <div class="lang-switch">
+          <a href="index.html" class="lang-switch__btn active">EN</a>
+          <a href="ja/index.html" class="lang-switch__btn">JA</a>
+        </div>
+      </div>
+
+      <button class="nav__toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M3 12h18M3 6h18M3 18h18"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+
+  <!-- ========== HERO ========== -->
+  <section class="hero">
+    <div class="hero__bg">
+      <div class="hero__grid"></div>
+      <div class="hero__stars"></div>
+      <div class="hero__aurora"></div>
+      <div class="shooting-star shooting-star--1"></div>
+      <div class="shooting-star shooting-star--2"></div>
+      <div class="shooting-star shooting-star--3"></div>
+    </div>
+
+    <div class="hero__content">
+      <!-- App Icon with glow -->
+      <div class="hero-icon reveal">
+        <div class="hero-icon__glow"></div>
+        <img src="images/app-icon.png" alt="RocketMouse AI" class="hero-icon__img" width="140" height="140">
+      </div>
+
+      <div class="hero__badge reveal reveal-delay-1">
+        <span class="badge">
+          <span class="badge__dot"></span>
+          Now Available for macOS
+        </span>
+      </div>
+
+      <h1 class="hero__title reveal reveal-delay-2">
+        <span class="line">Automate</span>
+        <span class="line"><span class="text-gradient">Everything</span></span>
+        <span class="line">on Your Mac</span>
+      </h1>
+
+      <p class="hero__subtitle reveal reveal-delay-3">
+        The most powerful visual RPA tool ever built for macOS.
+        169 operations. AI-powered. Zero code required.
+      </p>
+
+      <div class="hero__actions reveal reveal-delay-4">
+        <a href="download.html" class="btn btn--primary btn--large">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+          Download Free Trial
+        </a>
+        <a href="#features" class="btn btn--secondary btn--large">
+          See Features
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+      <div class="hero__meta reveal reveal-delay-5">
+        <span class="hero__meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          macOS 14+
+        </span>
+        <span class="hero__meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          Apple Notarized
+        </span>
+        <span class="hero__meta-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+          English &amp; Japanese
+        </span>
+      </div>
+    </div>
+
+    <!-- Window Mockup -->
+    <div class="hero__window reveal-scale reveal-delay-3">
+      <div class="window-frame">
+        <div class="window-frame__titlebar">
+          <span class="window-dot window-dot--red"></span>
+          <span class="window-dot window-dot--yellow"></span>
+          <span class="window-dot window-dot--green"></span>
+          <span class="window-frame__title">RocketMouse AI — Untitled.rmproj</span>
+        </div>
+        <div class="window-frame__body">
+          <div class="block-editor-mock">
+            <div class="block-palette-mock">
+              <div class="palette-category" style="background: #4C97FF;">Mouse</div>
+              <div class="palette-category" style="background: #9966FF;">Keyboard</div>
+              <div class="palette-category" style="background: #FFAB19;">Control</div>
+              <div class="palette-category" style="background: #40BF4A;">Data</div>
+              <div class="palette-category" style="background: #FF6680;">Browser</div>
+              <div class="palette-category" style="background: #5CB1D6;">AI</div>
+              <div class="palette-category" style="background: #CF63CF;">Excel</div>
+              <div class="palette-category" style="background: #FF8C1A;">File</div>
+              <div class="palette-category" style="background: #4CBB17;">Window</div>
+            </div>
+            <div class="block-workspace-mock">
+              <div class="mock-block" style="background: #FFAB19; border-radius: 8px 8px 8px 4px;">
+                When <span class="reporter">Start</span> clicked
+              </div>
+              <div class="mock-block" style="background: #FF6680;">
+                Open Browser <input type="text" value="https://..." readonly>
+              </div>
+              <div class="mock-block" style="background: #5CB1D6;">
+                Wait for page to load
+              </div>
+              <div class="mock-block" style="background: #FFAB19; border-radius: 8px;">
+                Repeat <span class="reporter">10</span> times
+              </div>
+              <div class="mock-block mock-block--indent" style="background: #FF6680;">
+                Click element <input type="text" value="#submit" readonly>
+              </div>
+              <div class="mock-block mock-block--indent" style="background: #40BF4A;">
+                Set <span class="reporter">result</span> to <span class="reporter">text</span>
+              </div>
+              <div class="mock-block mock-block--indent" style="background: #CF63CF;">
+                Write to Excel <span class="reporter">A1</span>
+              </div>
+              <div class="mock-block" style="background: #5CB1D6;">
+                AI: Analyze results
+              </div>
+              <div class="mock-block" style="background: #4CBB17; border-radius: 4px 4px 8px 8px;">
+                Show message <input type="text" value="Done!" readonly>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== STATS BAR ========== -->
+  <div class="stats-bar reveal">
+    <div class="stat">
+      <div class="stat__number text-gradient-blue" data-count="169" data-suffix="+">0+</div>
+      <div class="stat__label">Operations</div>
+    </div>
+    <div class="stat">
+      <div class="stat__number text-gradient-blue" data-count="24">0</div>
+      <div class="stat__label">Categories</div>
+    </div>
+    <div class="stat">
+      <div class="stat__number text-gradient-blue" data-count="7">0</div>
+      <div class="stat__label">Block Shapes</div>
+    </div>
+    <div class="stat">
+      <div class="stat__number text-gradient-blue" data-count="5">0</div>
+      <div class="stat__label">AI Providers</div>
+    </div>
+  </div>
+
+
+  <!-- ========== FEATURES ========== -->
+  <section class="section" id="features">
+    <div class="section__header reveal">
+      <div class="section__overline">Features</div>
+      <h2 class="section__title">Everything you need to<br><span class="text-gradient">automate your Mac</span></h2>
+      <p class="section__desc">
+        From simple mouse clicks to complex AI-driven workflows.
+        RocketMouse AI gives you superpowers.
+      </p>
+    </div>
+
+    <div class="bento-grid">
+      <!-- Visual Block Editor -->
+      <div class="bento-card bento-card--wide reveal">
+        <div class="bento-card__icon bento-card__icon--blue">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        </div>
+        <h3 class="bento-card__title">Visual Block Editor</h3>
+        <p class="bento-card__desc">
+          Build automation flows by snapping blocks together. 7 block shapes, color-coded categories,
+          drag & drop, undo/redo, minimap navigation, and natural language display.
+          No coding experience needed.
+        </p>
+      </div>
+
+      <!-- AI Copilot -->
+      <div class="bento-card reveal reveal-delay-1">
+        <div class="bento-card__icon bento-card__icon--purple">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <h3 class="bento-card__title">AI Copilot</h3>
+        <p class="bento-card__desc">
+          Describe what you want in plain English. AI generates the macro for you.
+          Supports OpenAI, Anthropic, Google, and more.
+        </p>
+      </div>
+
+      <!-- Browser Automation -->
+      <div class="bento-card reveal reveal-delay-1">
+        <div class="bento-card__icon bento-card__icon--pink">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+        </div>
+        <h3 class="bento-card__title">Browser Automation</h3>
+        <p class="bento-card__desc">
+          Playwright + Chrome built in. Navigate, click, fill forms, extract data,
+          run scripts — all from visual blocks.
+        </p>
+      </div>
+
+      <!-- Excel & Files -->
+      <div class="bento-card reveal">
+        <div class="bento-card__icon bento-card__icon--green">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <h3 class="bento-card__title">Excel &amp; File Operations</h3>
+        <p class="bento-card__desc">
+          Read and write Excel files natively. 18 spreadsheet operations plus full file system access — copy, move, create, archive.
+        </p>
+      </div>
+
+      <!-- Vision & OCR -->
+      <div class="bento-card reveal reveal-delay-1">
+        <div class="bento-card__icon bento-card__icon--cyan">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h3 class="bento-card__title">Vision &amp; OCR</h3>
+        <p class="bento-card__desc">
+          Apple Vision framework powers image recognition, template matching, and OCR text extraction.
+          Find anything on screen.
+        </p>
+      </div>
+
+      <!-- Macro Recording -->
+      <div class="bento-card bento-card--wide reveal reveal-delay-2">
+        <div class="bento-card__icon bento-card__icon--orange">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3" fill="currentColor"/></svg>
+        </div>
+        <h3 class="bento-card__title">Record &amp; Replay</h3>
+        <p class="bento-card__desc">
+          Hit record and perform your task. RocketMouse captures every mouse click and keystroke,
+          then generates editable blocks you can refine, loop, and extend.
+          Debug with breakpoints and step-through execution.
+        </p>
+      </div>
+
+      <!-- Cross-Platform -->
+      <div class="bento-card reveal">
+        <div class="bento-card__icon bento-card__icon--blue">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+        </div>
+        <h3 class="bento-card__title">Cross-Platform</h3>
+        <p class="bento-card__desc">
+          .rmproj files are fully compatible between macOS and Windows.
+          Build on Mac, run on Windows — and vice versa.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <hr class="glow-line">
+
+
+  <!-- ========== BLOCK SHAPES ========== -->
+  <section class="section section--alt">
+    <div class="section__header reveal">
+      <div class="section__overline">Block System</div>
+      <h2 class="section__title">7 block shapes.<br>Infinite possibilities.</h2>
+      <p class="section__desc">
+        Each shape represents a different type of operation.
+        Snap them together to build complex automations visually.
+      </p>
+    </div>
+
+    <div class="shapes-showcase">
+      <div class="shape-item reveal">
+        <div class="shape-item__visual">
+          <svg width="100" height="40" viewBox="0 0 100 40">
+            <rect x="2" y="2" width="96" height="36" rx="6" fill="#4C97FF" opacity="0.9"/>
+            <text x="50" y="25" text-anchor="middle" fill="white" font-size="12" font-weight="600">Stack</text>
+          </svg>
+        </div>
+        <div class="shape-item__name">Stack</div>
+        <div class="shape-item__desc">Basic action</div>
+      </div>
+
+      <div class="shape-item reveal reveal-delay-1">
+        <div class="shape-item__visual">
+          <svg width="100" height="50" viewBox="0 0 100 50">
+            <path d="M20 2 L80 2 Q96 2 96 12 L96 46 Q96 48 94 48 L6 48 Q4 48 4 46 L4 12 Q4 2 20 2 Z" fill="#FFAB19" opacity="0.9"/>
+            <path d="M30 2 Q50 -8 70 2" fill="#FFAB19" stroke="none"/>
+            <text x="50" y="32" text-anchor="middle" fill="white" font-size="12" font-weight="600">Hat</text>
+          </svg>
+        </div>
+        <div class="shape-item__name">Hat</div>
+        <div class="shape-item__desc">Event trigger</div>
+      </div>
+
+      <div class="shape-item reveal reveal-delay-2">
+        <div class="shape-item__visual">
+          <svg width="100" height="50" viewBox="0 0 100 50">
+            <path d="M2 6 Q2 2 6 2 L94 2 Q98 2 98 6 L98 22 L80 22 L80 38 L30 38 L30 22 L2 22 Z" fill="#FFAB19" opacity="0.9"/>
+            <rect x="2" y="40" width="96" height="8" rx="3" fill="#FFAB19" opacity="0.7"/>
+            <text x="50" y="16" text-anchor="middle" fill="white" font-size="11" font-weight="600">C-Block</text>
+          </svg>
+        </div>
+        <div class="shape-item__name">C-Block</div>
+        <div class="shape-item__desc">Loop / branch</div>
+      </div>
+
+      <div class="shape-item reveal reveal-delay-3">
+        <div class="shape-item__visual">
+          <svg width="100" height="40" viewBox="0 0 100 40">
+            <rect x="2" y="2" width="96" height="36" rx="18" fill="#40BF4A" opacity="0.9"/>
+            <text x="50" y="25" text-anchor="middle" fill="white" font-size="11" font-weight="600">Reporter</text>
+          </svg>
+        </div>
+        <div class="shape-item__name">Reporter</div>
+        <div class="shape-item__desc">Returns value</div>
+      </div>
+
+      <div class="shape-item reveal reveal-delay-4">
+        <div class="shape-item__visual">
+          <svg width="100" height="40" viewBox="0 0 100 40">
+            <polygon points="20,20 50,2 80,20 50,38" fill="#5CB1D6" opacity="0.9" transform="scale(1.2) translate(-8, -3)"/>
+            <text x="50" y="25" text-anchor="middle" fill="white" font-size="11" font-weight="600">Boolean</text>
+          </svg>
+        </div>
+        <div class="shape-item__name">Boolean</div>
+        <div class="shape-item__desc">True / false</div>
+      </div>
+
+      <div class="shape-item reveal reveal-delay-5">
+        <div class="shape-item__visual">
+          <svg width="100" height="40" viewBox="0 0 100 40">
+            <rect x="2" y="2" width="96" height="36" rx="6" fill="#FF4D6A" opacity="0.9"/>
+            <rect x="2" y="32" width="96" height="6" rx="3" fill="#CC3D55" opacity="0.9"/>
+            <text x="50" y="24" text-anchor="middle" fill="white" font-size="12" font-weight="600">Cap</text>
+          </svg>
+        </div>
+        <div class="shape-item__name">Cap</div>
+        <div class="shape-item__desc">End point</div>
+      </div>
+
+      <div class="shape-item reveal reveal-delay-5">
+        <div class="shape-item__visual">
+          <svg width="100" height="55" viewBox="0 0 100 55">
+            <path d="M2 6 Q2 2 6 2 L94 2 Q98 2 98 6 L98 16 L80 16 L80 24 L30 24 L30 16 L2 16 Z" fill="#FFAB19" opacity="0.9"/>
+            <path d="M2 28 L30 28 L30 36 L80 36 L80 28 L98 28 L98 46 L2 46 Z" fill="#FFAB19" opacity="0.7"/>
+            <rect x="2" y="48" width="96" height="6" rx="3" fill="#FFAB19" opacity="0.6"/>
+            <text x="50" y="13" text-anchor="middle" fill="white" font-size="9" font-weight="600">If-Else</text>
+          </svg>
+        </div>
+        <div class="shape-item__name">If-Else</div>
+        <div class="shape-item__desc">Branch flow</div>
+      </div>
+    </div>
+  </section>
+
+
+  <hr class="glow-line">
+
+
+  <!-- ========== AI SECTION ========== -->
+  <section class="section ai-section">
+    <div class="section__header reveal">
+      <div class="section__overline" style="color: var(--accent-purple);">AI-Powered</div>
+      <h2 class="section__title">Your automation<br><span class="text-gradient-purple">co-pilot</span></h2>
+      <p class="section__desc">
+        Describe your workflow in plain language and let AI build it.
+        Connect your favorite LLM provider and unlock intelligent automation.
+      </p>
+    </div>
+
+    <div class="ai-features">
+      <div class="ai-card reveal">
+        <div class="ai-card__icon">&#x1F916;</div>
+        <h3 class="ai-card__title">AI Macro Generation</h3>
+        <p class="ai-card__desc">
+          Tell the AI what you want to automate. It generates a complete macro
+          with proper blocks, loops, and error handling — ready to run.
+        </p>
+      </div>
+
+      <div class="ai-card reveal reveal-delay-1">
+        <div class="ai-card__icon">&#x1F50D;</div>
+        <h3 class="ai-card__title">AI Debugging</h3>
+        <p class="ai-card__desc">
+          When something goes wrong, AI analyzes your macro's state,
+          identifies the root cause, and suggests fixes automatically.
+        </p>
+      </div>
+
+      <div class="ai-card reveal reveal-delay-2">
+        <div class="ai-card__icon">&#x23F1;</div>
+        <h3 class="ai-card__title">Smart Wait</h3>
+        <p class="ai-card__desc">
+          AI determines the optimal timing for actions instead of fixed delays.
+          Faster execution, fewer errors.
+        </p>
+      </div>
+    </div>
+
+    <div class="ai-providers reveal">
+      <div class="ai-provider">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+        OpenAI
+      </div>
+      <div class="ai-provider">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+        Anthropic
+      </div>
+      <div class="ai-provider">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+        Google Gemini
+      </div>
+      <div class="ai-provider">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+        Groq
+      </div>
+      <div class="ai-provider">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+        Custom API
+      </div>
+    </div>
+  </section>
+
+
+  <hr class="glow-line">
+
+
+  <!-- ========== CATEGORIES ========== -->
+  <section class="section section--alt">
+    <div class="section__header reveal">
+      <div class="section__overline">Operations</div>
+      <h2 class="section__title">169 operations.<br>24 categories.</h2>
+      <p class="section__desc">
+        From mouse clicks to AI instructions, every automation primitive you need is built in.
+      </p>
+    </div>
+
+    <div class="category-grid">
+      <div class="category-item reveal">
+        <div class="category-item__color" style="background: #4C97FF;"></div>
+        <div class="category-item__info">
+          <div class="category-item__name">Mouse</div>
+          <div class="category-item__count">16 operations</div>
+        </div>
+      </div>
+      <div class="category-item reveal">
+        <div class="category-item__color" style="background: #9966FF;"></div>
+        <div class="category-item__info">
+          <div class="category-item__name">Keyboard</div>
+          <div class="category-item__count">2 operations</div>
+        </div>
+      </div>
+      <div class="category-item reveal">
+        <div class="category-item__color" style="background: #4CBB17;"></div>
+        <div class="category-item__info">
+          <div class="category-item__name">Window</div>
+          <div class="category-item__count">8 operations</div>
+        </div>
+      </div>
+      <div class="category-item reveal">
+        <div class="category-item__color" style="background: #FF6680;"></div>
+        <div class="category-item__info">
+          <div class="category-item__name">Browser</div>
+          <div class="category-item__count">16 operations</div>
+        </div>
+      </div>
+      <div class="category-item reveal">
+        <div class="category-item__color" style="background: #CF63CF;"></div>
+        <div class="category-item__info">
+          <div class="category-item__name">Excel</div>
+          <div class="category-item__count">18 operations</div>
+        </div>
+      </div>
+      <div class="category-item reveal">
+        <div class="category-item__color" style="background: #FF8C1A;"></div>
+        <div class="category-item__info">
+          <div class="category-item__name">File</div>
+          <div class="category-item__count">12 operations</div>
+        </div>
+      </div>
+      <div class="category-item reveal">
+        <div class="category-item__color" style="background: #FFAB19;"></div>
+        <div class="category-item__info">
+          <div class="category-item__name">Control Flow</div>
+          <div class="category-item__count">17 operations</div>
+        </div>
+      </div>
+      <div class="category-item reveal">
+        <div class="category-item__color" style="background: #40BF4A;"></div>
+        <div class="category-item__info">
+          <div class="category-item__name">Data</div>
+          <div class="category-item__count">14 operations</div>
+        </div>
+      </div>
+      <div class="category-item reveal">
+        <div class="category-item__color" style="background: #FF4D6A;"></div>
+        <div class="category-item__info">
+          <div class="category-item__name">Vision &amp; OCR</div>
+          <div class="category-item__count">8 operations</div>
+        </div>
+      </div>
+      <div class="category-item reveal">
+        <div class="category-item__color" style="background: #5CB1D6;"></div>
+        <div class="category-item__info">
+          <div class="category-item__name">AI</div>
+          <div class="category-item__count">6 operations</div>
+        </div>
+      </div>
+      <div class="category-item reveal">
+        <div class="category-item__color" style="background: #0FBD8C;"></div>
+        <div class="category-item__info">
+          <div class="category-item__name">List</div>
+          <div class="category-item__count">8 operations</div>
+        </div>
+      </div>
+      <div class="category-item reveal">
+        <div class="category-item__color" style="background: #FF6F61;"></div>
+        <div class="category-item__info">
+          <div class="category-item__name">Network</div>
+          <div class="category-item__count">3 operations</div>
+        </div>
+      </div>
+      <div class="category-item reveal">
+        <div class="category-item__color" style="background: #8E8E93;"></div>
+        <div class="category-item__info">
+          <div class="category-item__name">System</div>
+          <div class="category-item__count">13 operations</div>
+        </div>
+      </div>
+      <div class="category-item reveal">
+        <div class="category-item__color" style="background: #FF2D55;"></div>
+        <div class="category-item__info">
+          <div class="category-item__name">Variable</div>
+          <div class="category-item__count">5 operations</div>
+        </div>
+      </div>
+      <div class="category-item reveal">
+        <div class="category-item__color" style="background: #30D158;"></div>
+        <div class="category-item__info">
+          <div class="category-item__name">Wait</div>
+          <div class="category-item__count">5 operations</div>
+        </div>
+      </div>
+      <div class="category-item reveal">
+        <div class="category-item__color" style="background: #BF5AF2;"></div>
+        <div class="category-item__info">
+          <div class="category-item__name">Application</div>
+          <div class="category-item__count">4 operations</div>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-center text-secondary reveal" style="margin-top: var(--space-2xl); font-size: var(--text-sm);">
+      + 8 more categories including Text, Reporters, Sensing, Color, Audio, Boolean, Screen Capture, and Remote
+    </p>
+  </section>
+
+
+  <!-- ========== HOW IT WORKS ========== -->
+  <section class="section">
+    <div class="section__header reveal">
+      <div class="section__overline">Workflow</div>
+      <h2 class="section__title">Three ways to build</h2>
+      <p class="section__desc">
+        Choose your style. All three produce the same editable block macros.
+      </p>
+    </div>
+
+    <div class="bento-grid" style="grid-template-columns: repeat(3, 1fr);">
+      <div class="bento-card reveal" style="text-align: center;">
+        <div style="font-size: 48px; margin-bottom: var(--space-lg);">&#x1F3AF;</div>
+        <h3 class="bento-card__title">Drag &amp; Drop</h3>
+        <p class="bento-card__desc">
+          Pick blocks from the palette and snap them together.
+          Visual, intuitive, precise.
+        </p>
+      </div>
+
+      <div class="bento-card reveal reveal-delay-1" style="text-align: center;">
+        <div style="font-size: 48px; margin-bottom: var(--space-lg);">&#x23FA;</div>
+        <h3 class="bento-card__title">Record</h3>
+        <p class="bento-card__desc">
+          Click Record and perform your task manually.
+          RocketMouse captures every action as blocks.
+        </p>
+      </div>
+
+      <div class="bento-card reveal reveal-delay-2" style="text-align: center;">
+        <div style="font-size: 48px; margin-bottom: var(--space-lg);">&#x1F4AC;</div>
+        <h3 class="bento-card__title">Ask AI</h3>
+        <p class="bento-card__desc">
+          Describe your workflow in plain English.
+          AI Copilot generates the macro instantly.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+  <hr class="glow-line">
+
+
+  <!-- ========== EXECUTION ENGINE ========== -->
+  <section class="section section--alt">
+    <div class="section__header reveal">
+      <div class="section__overline">Engine</div>
+      <h2 class="section__title">Built for <span class="text-gradient-blue">reliability</span></h2>
+    </div>
+
+    <div class="bento-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 800px; margin: 0 auto;">
+      <div class="bento-card reveal">
+        <h3 class="bento-card__title">Speed Control</h3>
+        <p class="bento-card__desc">Run macros at 0.1x to 5.0x speed. Slow down to debug, speed up for production.</p>
+      </div>
+      <div class="bento-card reveal reveal-delay-1">
+        <h3 class="bento-card__title">DryRun Mode</h3>
+        <p class="bento-card__desc">Test logic without executing real actions. Perfect for validating complex flows.</p>
+      </div>
+      <div class="bento-card reveal reveal-delay-2">
+        <h3 class="bento-card__title">Breakpoints</h3>
+        <p class="bento-card__desc">Set breakpoints, step through blocks one by one, inspect variables in real time.</p>
+      </div>
+      <div class="bento-card reveal reveal-delay-3">
+        <h3 class="bento-card__title">Error Handling</h3>
+        <p class="bento-card__desc">Try-Catch blocks, custom functions with return values, and call stack depth up to 100.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== CTA ========== -->
+  <section class="cta-section">
+    <img src="images/app-icon.png" alt="" class="cta-icon reveal" width="80" height="80">
+    <h2 class="cta__title reveal reveal-delay-1">
+      Ready to automate<br><span class="text-gradient">your Mac?</span>
+    </h2>
+    <p class="cta__desc reveal reveal-delay-2">
+      Download RocketMouse AI free for 7 days. No credit card required.
+    </p>
+    <div class="cta__actions reveal reveal-delay-2">
+      <a href="download.html" class="btn btn--primary btn--large">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        Download Free Trial
+      </a>
+      <a href="pricing.html" class="btn btn--secondary btn--large">
+        View Pricing
+      </a>
+    </div>
+  </section>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <img src="images/app-icon-128.png" alt="RocketMouse AI" class="footer__brand-icon" width="48" height="48">
+        <div class="footer__brand-name">
+          RocketMouse AI
+        </div>
+        <p class="footer__brand-desc">
+          The ultimate RPA automation tool for macOS.
+          Built with Swift, powered by AI.
+        </p>
+      </div>
+
+      <div>
+        <h4 class="footer__col-title">Product</h4>
+        <ul class="footer__links">
+          <li><a href="download.html">Download</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="releases.html">Release Notes</a></li>
+          <li><a href="help.html">Documentation</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer__col-title">Resources</h4>
+        <ul class="footer__links">
+          <li><a href="help.html">Help Center</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="license.html">License Policy</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer__col-title">Legal</h4>
+        <ul class="footer__links">
+          <li><a href="license.html">EULA</a></li>
+          <li><a href="license.html">Privacy Policy</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__bottom">
+      <span>&copy; 2026 MojoSoft. All rights reserved.</span>
+      <span>Made with &#x2764; for Mac</span>
+    </div>
+  </footer>
+
+
+  <script src="js/main.js"></script>
+</body>
+</html>
