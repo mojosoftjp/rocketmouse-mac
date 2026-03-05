@@ -3,7 +3,27 @@
    Scroll animations, nav behavior, interactions
    ============================================================ */
 
+/* --- Auto language redirect (EN → JA) --- */
+(function () {
+  // Only redirect on EN pages (not already in /ja/)
+  if (window.location.pathname.indexOf('/ja/') !== -1) return;
+
+  // Skip if user has manually chosen a language
+  if (localStorage.getItem('rm_lang_override')) return;
+
+  // Check browser language
+  var lang = navigator.language || navigator.userLanguage || '';
+  if (lang.substring(0, 2).toLowerCase() === 'ja') {
+    // Map current EN page to JA equivalent
+    var path = window.location.pathname;
+    var base = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
+    var jaUrl = path.substring(0, path.lastIndexOf('/') + 1) + 'ja/' + base;
+    window.location.replace(jaUrl);
+  }
+})();
+
 document.addEventListener('DOMContentLoaded', () => {
+  initLangSwitch();
   initRevealAnimations();
   initNavScroll();
   initMobileMenu();
@@ -12,6 +32,18 @@ document.addEventListener('DOMContentLoaded', () => {
   initStarField();
   initCountUp();
 });
+
+
+/* --- Language switch: remember manual choice --- */
+function initLangSwitch() {
+  var btns = document.querySelectorAll('.lang-switch__btn');
+  btns.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      // Store that user explicitly chose a language
+      localStorage.setItem('rm_lang_override', '1');
+    });
+  });
+}
 
 
 /* --- Intersection Observer for reveal animations --- */
