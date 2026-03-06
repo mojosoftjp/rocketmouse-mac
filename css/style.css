@@ -621,32 +621,32 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 0 10px 4px rgba(255,255,255,0.8), 0 0 25px 8px rgba(16,185,129,0.5);
 }
 
-.shooting-star-1 { top: 3%; right: -12%; width: 200px; transform: rotate(145deg); animation: shoot1 6s ease-in infinite 0.5s; }
-.shooting-star-2 { top: 18%; right: -6%; width: 160px; transform: rotate(150deg); animation: shoot2 7s ease-in infinite 2.5s; }
+.shooting-star-1 { top: 3%; right: 2%; width: 200px; transform: rotate(145deg); animation: shoot1 6s ease-in infinite 0.5s; }
+.shooting-star-2 { top: 18%; right: 8%; width: 160px; transform: rotate(150deg); animation: shoot2 7s ease-in infinite 2.5s; }
 .shooting-star-2::before { background: linear-gradient(90deg, transparent 0%, rgba(99,102,241,0.3) 15%, rgba(6,182,212,0.7) 50%, #fff 100%); }
 .shooting-star-2::after { box-shadow: 0 0 10px 4px rgba(255,255,255,0.8), 0 0 25px 8px rgba(99,102,241,0.5); }
 
-.shooting-star-3 { top: 38%; right: -15%; width: 240px; height: 2.5px; transform: rotate(142deg); animation: shoot3 8s ease-in infinite 5s; }
+.shooting-star-3 { top: 38%; right: 0%; width: 240px; height: 2.5px; transform: rotate(142deg); animation: shoot3 8s ease-in infinite 5s; }
 .shooting-star-3::before { background: linear-gradient(90deg, transparent 0%, rgba(6,182,212,0.3) 10%, rgba(16,185,129,0.7) 45%, #fff 100%); }
 .shooting-star-3::after { width: 10px; height: 10px; top: -4px; box-shadow: 0 0 12px 5px rgba(255,255,255,0.9), 0 0 30px 10px rgba(6,182,212,0.5); }
 
-.shooting-star-4 { top: 55%; right: -8%; width: 140px; transform: rotate(148deg); animation: shoot4 9s ease-in infinite 3.8s; }
+.shooting-star-4 { top: 55%; right: 5%; width: 140px; transform: rotate(148deg); animation: shoot4 9s ease-in infinite 3.8s; }
 .shooting-star-4::before { background: linear-gradient(90deg, transparent 0%, rgba(99,102,241,0.3) 15%, rgba(16,185,129,0.7) 50%, #fff 100%); }
 .shooting-star-4::after { box-shadow: 0 0 10px 4px rgba(255,255,255,0.8), 0 0 25px 8px rgba(16,185,129,0.5); }
 
-.shooting-star-5 { top: 72%; right: -10%; width: 180px; transform: rotate(138deg); animation: shoot5 7.5s ease-in infinite 7s; }
+.shooting-star-5 { top: 72%; right: 3%; width: 180px; transform: rotate(138deg); animation: shoot5 7.5s ease-in infinite 7s; }
 .shooting-star-5::before { background: linear-gradient(90deg, transparent 0%, rgba(16,185,129,0.3) 15%, rgba(99,102,241,0.7) 50%, #fff 100%); }
 .shooting-star-5::after { box-shadow: 0 0 10px 4px rgba(255,255,255,0.8), 0 0 25px 8px rgba(99,102,241,0.5); }
 
-.shooting-star-6 { top: 12%; right: -18%; width: 220px; height: 2.5px; transform: rotate(140deg); animation: shoot6 8.5s ease-in infinite 1.5s; }
+.shooting-star-6 { top: 12%; right: 0%; width: 220px; height: 2.5px; transform: rotate(140deg); animation: shoot6 8.5s ease-in infinite 1.5s; }
 .shooting-star-6::before { background: linear-gradient(90deg, transparent 0%, rgba(167,139,250,0.3) 15%, rgba(16,185,129,0.7) 50%, #fff 100%); }
 .shooting-star-6::after { width: 10px; height: 10px; top: -4px; box-shadow: 0 0 12px 5px rgba(255,255,255,0.9), 0 0 30px 10px rgba(167,139,250,0.5); }
 
-.shooting-star-7 { top: 48%; right: -5%; width: 170px; transform: rotate(152deg); animation: shoot7 6.5s ease-in infinite 4.5s; }
+.shooting-star-7 { top: 48%; right: 10%; width: 170px; transform: rotate(152deg); animation: shoot7 6.5s ease-in infinite 4.5s; }
 .shooting-star-7::before { background: linear-gradient(90deg, transparent 0%, rgba(6,182,212,0.3) 15%, rgba(99,102,241,0.7) 50%, #fff 100%); }
 .shooting-star-7::after { box-shadow: 0 0 10px 4px rgba(255,255,255,0.8), 0 0 25px 8px rgba(6,182,212,0.5); }
 
-.shooting-star-8 { top: 82%; right: -14%; width: 260px; height: 3px; transform: rotate(136deg); animation: shoot8 10s ease-in infinite 6.5s; }
+.shooting-star-8 { top: 82%; right: 0%; width: 260px; height: 3px; transform: rotate(136deg); animation: shoot8 10s ease-in infinite 6.5s; }
 .shooting-star-8::before { background: linear-gradient(90deg, transparent 0%, rgba(16,185,129,0.3) 10%, rgba(6,182,212,0.7) 45%, #fff 100%); }
 .shooting-star-8::after { width: 12px; height: 12px; top: -5px; box-shadow: 0 0 14px 6px rgba(255,255,255,0.9), 0 0 35px 12px rgba(16,185,129,0.5); }
 
