@@ -594,55 +594,117 @@ h1, h2, h3, h4, h5, h6 {
   50% { opacity: var(--max-opacity, 0.6); transform: scale(1); }
 }
 
-/* Shooting Stars */
+/* Shooting Stars (WPF版準拠: 8本, グラデーション尾 + 光るヘッドドット) */
 .shooting-star {
   position: absolute;
-  height: 2px;
-  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(88,166,255,0.8) 50%, #fff 100%);
-  opacity: 0;
-  transform: rotate(-35deg);
-  filter: drop-shadow(0 0 6px rgba(88,166,255,0.8));
-  z-index: 1;
   pointer-events: none;
+  height: 2px;
+  border-radius: 999px;
+  opacity: 0;
+  z-index: 1;
+}
+.shooting-star::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 100%; height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, transparent 0%, rgba(16,185,129,0.3) 15%, rgba(6,182,212,0.7) 50%, #fff 100%);
+}
+.shooting-star::after {
+  content: '';
+  position: absolute;
+  top: -3px; right: -2px;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 10px 4px rgba(255,255,255,0.8), 0 0 25px 8px rgba(16,185,129,0.5);
 }
 
-.shooting-star--1 {
-  width: 160px;
-  top: 8%;
-  left: 15%;
-  animation: shooting-star 7s ease-in-out infinite;
-}
+.shooting-star-1 { top: 3%; right: -12%; width: 200px; transform: rotate(145deg); animation: shoot1 6s ease-in infinite 0.5s; }
+.shooting-star-2 { top: 18%; right: -6%; width: 160px; transform: rotate(150deg); animation: shoot2 7s ease-in infinite 2.5s; }
+.shooting-star-2::before { background: linear-gradient(90deg, transparent 0%, rgba(99,102,241,0.3) 15%, rgba(6,182,212,0.7) 50%, #fff 100%); }
+.shooting-star-2::after { box-shadow: 0 0 10px 4px rgba(255,255,255,0.8), 0 0 25px 8px rgba(99,102,241,0.5); }
 
-.shooting-star--2 {
-  width: 100px;
-  top: 22%;
-  left: 65%;
-  animation: shooting-star 7s ease-in-out infinite 2.5s;
-}
+.shooting-star-3 { top: 38%; right: -15%; width: 240px; height: 2.5px; transform: rotate(142deg); animation: shoot3 8s ease-in infinite 5s; }
+.shooting-star-3::before { background: linear-gradient(90deg, transparent 0%, rgba(6,182,212,0.3) 10%, rgba(16,185,129,0.7) 45%, #fff 100%); }
+.shooting-star-3::after { width: 10px; height: 10px; top: -4px; box-shadow: 0 0 12px 5px rgba(255,255,255,0.9), 0 0 30px 10px rgba(6,182,212,0.5); }
 
-.shooting-star--3 {
-  width: 130px;
-  top: 38%;
-  left: 35%;
-  animation: shooting-star 7s ease-in-out infinite 5s;
-}
+.shooting-star-4 { top: 55%; right: -8%; width: 140px; transform: rotate(148deg); animation: shoot4 9s ease-in infinite 3.8s; }
+.shooting-star-4::before { background: linear-gradient(90deg, transparent 0%, rgba(99,102,241,0.3) 15%, rgba(16,185,129,0.7) 50%, #fff 100%); }
+.shooting-star-4::after { box-shadow: 0 0 10px 4px rgba(255,255,255,0.8), 0 0 25px 8px rgba(16,185,129,0.5); }
 
-@keyframes shooting-star {
-  0% {
-    opacity: 0;
-    transform: translateX(0) translateY(0) rotate(-35deg);
-  }
-  4% {
-    opacity: 1;
-  }
-  12% {
-    opacity: 1;
-    transform: translateX(280px) translateY(160px) rotate(-35deg);
-  }
-  16%, 100% {
-    opacity: 0;
-    transform: translateX(320px) translateY(200px) rotate(-35deg);
-  }
+.shooting-star-5 { top: 72%; right: -10%; width: 180px; transform: rotate(138deg); animation: shoot5 7.5s ease-in infinite 7s; }
+.shooting-star-5::before { background: linear-gradient(90deg, transparent 0%, rgba(16,185,129,0.3) 15%, rgba(99,102,241,0.7) 50%, #fff 100%); }
+.shooting-star-5::after { box-shadow: 0 0 10px 4px rgba(255,255,255,0.8), 0 0 25px 8px rgba(99,102,241,0.5); }
+
+.shooting-star-6 { top: 12%; right: -18%; width: 220px; height: 2.5px; transform: rotate(140deg); animation: shoot6 8.5s ease-in infinite 1.5s; }
+.shooting-star-6::before { background: linear-gradient(90deg, transparent 0%, rgba(167,139,250,0.3) 15%, rgba(16,185,129,0.7) 50%, #fff 100%); }
+.shooting-star-6::after { width: 10px; height: 10px; top: -4px; box-shadow: 0 0 12px 5px rgba(255,255,255,0.9), 0 0 30px 10px rgba(167,139,250,0.5); }
+
+.shooting-star-7 { top: 48%; right: -5%; width: 170px; transform: rotate(152deg); animation: shoot7 6.5s ease-in infinite 4.5s; }
+.shooting-star-7::before { background: linear-gradient(90deg, transparent 0%, rgba(6,182,212,0.3) 15%, rgba(99,102,241,0.7) 50%, #fff 100%); }
+.shooting-star-7::after { box-shadow: 0 0 10px 4px rgba(255,255,255,0.8), 0 0 25px 8px rgba(6,182,212,0.5); }
+
+.shooting-star-8 { top: 82%; right: -14%; width: 260px; height: 3px; transform: rotate(136deg); animation: shoot8 10s ease-in infinite 6.5s; }
+.shooting-star-8::before { background: linear-gradient(90deg, transparent 0%, rgba(16,185,129,0.3) 10%, rgba(6,182,212,0.7) 45%, #fff 100%); }
+.shooting-star-8::after { width: 12px; height: 12px; top: -5px; box-shadow: 0 0 14px 6px rgba(255,255,255,0.9), 0 0 35px 12px rgba(16,185,129,0.5); }
+
+@keyframes shoot1 {
+  0%   { opacity: 0; transform: rotate(145deg) translateX(0); }
+  2%   { opacity: 1; }
+  14%  { opacity: 1; transform: rotate(145deg) translateX(1500px); }
+  17%  { opacity: 0; transform: rotate(145deg) translateX(1700px); }
+  100% { opacity: 0; }
+}
+@keyframes shoot2 {
+  0%   { opacity: 0; transform: rotate(150deg) translateX(0); }
+  2%   { opacity: 1; }
+  12%  { opacity: 1; transform: rotate(150deg) translateX(1300px); }
+  15%  { opacity: 0; transform: rotate(150deg) translateX(1500px); }
+  100% { opacity: 0; }
+}
+@keyframes shoot3 {
+  0%   { opacity: 0; transform: rotate(142deg) translateX(0); }
+  2%   { opacity: 1; }
+  13%  { opacity: 1; transform: rotate(142deg) translateX(1600px); }
+  16%  { opacity: 0; transform: rotate(142deg) translateX(1800px); }
+  100% { opacity: 0; }
+}
+@keyframes shoot4 {
+  0%   { opacity: 0; transform: rotate(148deg) translateX(0); }
+  2%   { opacity: 1; }
+  11%  { opacity: 1; transform: rotate(148deg) translateX(1200px); }
+  14%  { opacity: 0; transform: rotate(148deg) translateX(1400px); }
+  100% { opacity: 0; }
+}
+@keyframes shoot5 {
+  0%   { opacity: 0; transform: rotate(138deg) translateX(0); }
+  2%   { opacity: 1; }
+  13%  { opacity: 1; transform: rotate(138deg) translateX(1400px); }
+  16%  { opacity: 0; transform: rotate(138deg) translateX(1600px); }
+  100% { opacity: 0; }
+}
+@keyframes shoot6 {
+  0%   { opacity: 0; transform: rotate(140deg) translateX(0); }
+  2%   { opacity: 1; }
+  12%  { opacity: 1; transform: rotate(140deg) translateX(1600px); }
+  15%  { opacity: 0; transform: rotate(140deg) translateX(1800px); }
+  100% { opacity: 0; }
+}
+@keyframes shoot7 {
+  0%   { opacity: 0; transform: rotate(152deg) translateX(0); }
+  2%   { opacity: 1; }
+  14%  { opacity: 1; transform: rotate(152deg) translateX(1300px); }
+  17%  { opacity: 0; transform: rotate(152deg) translateX(1500px); }
+  100% { opacity: 0; }
+}
+@keyframes shoot8 {
+  0%   { opacity: 0; transform: rotate(136deg) translateX(0); }
+  2%   { opacity: 1; }
+  11%  { opacity: 1; transform: rotate(136deg) translateX(1800px); }
+  14%  { opacity: 0; transform: rotate(136deg) translateX(2000px); }
+  100% { opacity: 0; }
 }
 
 /* Aurora / Nebula glow in hero */
