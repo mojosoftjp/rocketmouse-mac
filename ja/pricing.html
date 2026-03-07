@@ -4,21 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>購入 — RocketMouse AI</title>
-  <meta name="description" content="RocketMouse AI ライセンスの購入。買い切り・月額不要。パーソナル¥49,800・ビジネス¥148,000（税込）。PayPal・銀行振込対応。">
+  <meta name="description" content="RocketMouse AI ライセンスの購入。発売記念価格 4/30まで！パーソナル¥29,800・ビジネス¥99,800（税込）。PayPal・銀行振込対応。">
   <meta name="theme-color" content="#06060a">
   <link rel="canonical" href="https://mojosoftjp.github.io/rocketmouse-mac/ja/pricing.html">
   <link rel="alternate" hreflang="en" href="https://mojosoftjp.github.io/rocketmouse-mac/pricing.html">
   <link rel="alternate" hreflang="ja" href="https://mojosoftjp.github.io/rocketmouse-mac/ja/pricing.html">
-  <meta property="og:title" content="購入 — RocketMouse AI">
-  <meta property="og:description" content="RocketMouse AI ライセンスの購入。買い切り・月額不要。パーソナル¥49,800・ビジネス¥148,000（税込）。">
+  <meta property="og:title" content="購入 — RocketMouse AI【発売記念価格】">
+  <meta property="og:description" content="発売記念価格 4/30まで！パーソナル¥29,800・ビジネス¥99,800（税込）。買い切り・月額不要。">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mojosoftjp.github.io/rocketmouse-mac/ja/pricing.html">
   <meta property="og:image" content="https://mojosoftjp.github.io/rocketmouse-mac/images/og-image.png">
   <meta property="og:site_name" content="RocketMouse AI">
   <meta property="og:locale" content="ja_JP">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="購入 — RocketMouse AI">
-  <meta name="twitter:description" content="RocketMouse AI ライセンスの購入。買い切り・月額不要。パーソナル¥49,800・ビジネス¥148,000（税込）。">
+  <meta name="twitter:title" content="購入 — RocketMouse AI【発売記念価格】">
+  <meta name="twitter:description" content="発売記念価格 4/30まで！パーソナル¥29,800・ビジネス¥99,800（税込）。買い切り・月額不要。">
   <meta name="twitter:image" content="https://mojosoftjp.github.io/rocketmouse-mac/images/og-image.png">
   <link rel="apple-touch-icon" href="../images/app-icon-256.png">
   <link rel="icon" type="image/png" href="../images/app-icon-128.png">
@@ -28,6 +28,60 @@
   <link rel="stylesheet" href="../css/style.css">
   <style>
     body{font-family:'Noto Sans JP','Inter',-apple-system,BlinkMacSystemFont,sans-serif;}
+
+    /* --- Launch Sale banner --- */
+    .sale-banner {
+      max-width: 820px;
+      margin: 0 auto 32px;
+      background: linear-gradient(135deg, rgba(239,68,68,0.12), rgba(251,146,60,0.12));
+      border: 1px solid rgba(239,68,68,0.3);
+      border-radius: 12px;
+      padding: 1.2rem 1.5rem;
+      text-align: center;
+    }
+    .sale-banner__title {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #f97316;
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .sale-banner__desc {
+      color: rgba(255,255,255,0.7);
+      font-size: 0.9rem;
+    }
+    .sale-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #ef4444, #f97316);
+      color: #fff;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 8px;
+    }
+    .price-original {
+      font-size: 1.1rem;
+      color: var(--text-muted, #6e7681);
+      text-decoration: line-through;
+      margin-bottom: 2px;
+    }
+    .price-sale {
+      font-size: 2.4rem;
+      font-weight: 800;
+      color: #f97316;
+      margin: 4px 0 4px;
+    }
+    .sale-until {
+      color: #f97316;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
 
     /* --- Purchase page specific --- */
     .purchase-grid {
@@ -369,15 +423,26 @@
     <p class="page-header__desc reveal reveal-delay-1">RocketMouse AI のフルバージョンを入手 — 買い切り・月額不要</p>
   </header>
 
+  <!-- 発売記念セールバナー -->
+  <section class="section" style="padding-top:0;padding-bottom:0;">
+    <div class="sale-banner reveal">
+      <div class="sale-banner__title">発売記念価格 — 2026年4月30日まで</div>
+      <p class="sale-banner__desc">発売を記念して、期間限定の特別価格でご提供中！</p>
+    </div>
+  </section>
+
   <!-- 購入カード -->
   <section class="section" style="padding-top:0;">
     <div class="purchase-grid reveal">
 
       <!-- 個人版 -->
       <div class="purchase-card">
+        <span class="sale-badge">発売記念価格</span>
         <h3>Personal</h3>
         <p class="subtitle">1台のMac &middot; 永久ライセンス</p>
-        <div class="price">&yen;49,800</div>
+        <div class="price-original">&yen;49,800</div>
+        <div class="price-sale">&yen;29,800</div>
+        <p class="sale-until">2026年4月30日まで</p>
         <p class="price-note">税込 &middot; 買い切り</p>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>全機能無制限</li>
@@ -400,9 +465,12 @@
 
       <!-- 法人版 -->
       <div class="purchase-card">
+        <span class="sale-badge">発売記念価格</span>
         <h3>Business</h3>
         <p class="subtitle">Mac台数無制限 &middot; 永久ライセンス</p>
-        <div class="price">&yen;148,000</div>
+        <div class="price-original">&yen;148,000</div>
+        <div class="price-sale">&yen;99,800</div>
+        <p class="sale-until">2026年4月30日まで</p>
         <p class="price-note">税込 &middot; 買い切り</p>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>全機能無制限</li>
@@ -444,7 +512,7 @@
         <li>ライセンスキーは、お支払い完了後24時間以内にメールでお届けします</li>
         <li>個人版は1台のMacでのみ有効です。Mac変更時は再発行が必要です</li>
         <li>法人版は同一法人内であればMac台数無制限でご利用いただけます</li>
-        <li>返金は原則として対応しておりません。購入前に7日間の試用版でご確認ください</li>
+        <li>返金は原則として対応しておりません。購入前に14日間の試用版でご確認ください</li>
       </ul>
     </div>
 
@@ -470,8 +538,8 @@
         <ol>
           <li>上記口座に代金をお振込みください
             <ul>
-              <li>個人版: <strong>&yen;49,800（税込）</strong></li>
-              <li>法人版: <strong>&yen;148,000（税込）</strong></li>
+              <li>個人版: <strong><del>&yen;49,800</del> → &yen;29,800（税込）</strong> — 発売記念価格</li>
+              <li>法人版: <strong><del>&yen;148,000</del> → &yen;99,800（税込）</strong> — 発売記念価格</li>
             </ul>
           </li>
           <li>お振込み後、以下の情報を <a href="mailto:support@mojosoft.biz?subject=RocketMouse%20AI%20Mac%E7%89%88%20%E9%8A%80%E8%A1%8C%E6%8C%AF%E8%BE%BC%20%E3%83%A9%E3%82%A4%E3%82%BB%E3%83%B3%E3%82%B9%E7%94%B3%E8%AB%8B">support@mojosoft.biz</a> までメールでお送りください：
@@ -550,7 +618,7 @@
   <!-- CTA -->
   <section class="cta-section">
     <img src="../images/app-icon.png" alt="" class="cta-icon reveal" width="80" height="80">
-    <h2 class="cta__title reveal reveal-delay-1">7日間無料で<span class="text-gradient">お試し</span></h2>
+    <h2 class="cta__title reveal reveal-delay-1">14日間無料で<span class="text-gradient">お試し</span></h2>
     <p class="cta__desc reveal reveal-delay-2">すべての機能にフルアクセス。クレジットカード不要。</p>
     <div class="cta__actions reveal reveal-delay-3"><a href="download.html" class="btn btn--primary btn--large"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>無料トライアルをダウンロード</a></div>
   </section>
@@ -653,16 +721,16 @@
           var hwid = input ? input.value.trim().toUpperCase() : '';
           return actions.order.create({
             purchase_units: [{
-              description: 'RocketMouse AI 個人版ライセンス (Mac) [HW:' + hwid + ']',
+              description: 'RocketMouse AI 個人版ライセンス (Mac) [発売記念価格] [HW:' + hwid + ']',
               amount: {
                 currency_code: 'JPY',
-                value: '49800',
-                breakdown: { item_total: { currency_code: 'JPY', value: '49800' } }
+                value: '29800',
+                breakdown: { item_total: { currency_code: 'JPY', value: '29800' } }
               },
               items: [{
-                name: 'RocketMouse AI 個人版ライセンス (Mac)',
+                name: 'RocketMouse AI 個人版ライセンス (Mac) [発売記念価格]',
                 sku: 'MJ020',
-                unit_amount: { currency_code: 'JPY', value: '49800' },
+                unit_amount: { currency_code: 'JPY', value: '29800' },
                 quantity: '1',
                 description: 'HW:' + hwid
               }],
@@ -674,7 +742,7 @@
           return actions.order.capture().then(function(details) {
             var input = document.getElementById('hardware-id-input');
             var hwid = input ? input.value.trim().toUpperCase() : '';
-            showSuccessModal('RocketMouse AI 個人版', '¥49,800（税込）', details.payer.email_address, hwid);
+            showSuccessModal('RocketMouse AI 個人版（発売記念価格）', '¥29,800（税込）', details.payer.email_address, hwid);
           });
         },
         onError: function(err) {
@@ -699,13 +767,13 @@
               description: desc,
               amount: {
                 currency_code: 'JPY',
-                value: '148000',
-                breakdown: { item_total: { currency_code: 'JPY', value: '148000' } }
+                value: '99800',
+                breakdown: { item_total: { currency_code: 'JPY', value: '99800' } }
               },
               items: [{
-                name: 'RocketMouse AI 法人版ライセンス (Mac, Mac台数無制限)',
+                name: 'RocketMouse AI 法人版ライセンス (Mac, Mac台数無制限) [発売記念価格]',
                 sku: 'MJ021',
-                unit_amount: { currency_code: 'JPY', value: '148000' },
+                unit_amount: { currency_code: 'JPY', value: '99800' },
                 quantity: '1',
                 description: hwid ? 'HW:' + hwid : 'Mac台数無制限'
               }],
@@ -717,7 +785,7 @@
           return actions.order.capture().then(function(details) {
             var input = document.getElementById('hardware-id-input-business');
             var hwid = input ? input.value.trim().toUpperCase() : '';
-            showSuccessModal('RocketMouse AI 法人版（Mac台数無制限）', '¥148,000（税込）', details.payer.email_address, hwid || null);
+            showSuccessModal('RocketMouse AI 法人版（Mac台数無制限・発売記念価格）', '¥99,800（税込）', details.payer.email_address, hwid || null);
           });
         },
         onError: function(err) {
