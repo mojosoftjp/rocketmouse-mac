@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XML_DIZ_INFO>
+  <MASTER_PAD_VERSION_INFO>
+    <MASTER_PAD_VERSION>4.0</MASTER_PAD_VERSION>
+    <MASTER_PAD_EDITOR>Hand-crafted</MASTER_PAD_EDITOR>
+    <MASTER_PAD_INFO>Portable Application Description, or PAD, is a data set that is used by shareware authors to disseminate information to anyone interested in their software products.</MASTER_PAD_INFO>
+  </MASTER_PAD_VERSION_INFO>
+
+  <Company_Info>
+    <Company_Name>Mojosoft Co., Ltd.</Company_Name>
+    <Address_1></Address_1>
+    <City_Town>Tokyo</City_Town>
+    <State_Province></State_Province>
+    <Zip_Postal_Code></Zip_Postal_Code>
+    <Country>Japan</Country>
+    <Company_WebSite_URL>https://mojosoft.biz/</Company_WebSite_URL>
+    <Contact_First_Name>Support</Contact_First_Name>
+    <Contact_Last_Name>Team</Contact_Last_Name>
+    <Contact_Email>support@mojosoft.biz</Contact_Email>
+  </Company_Info>
+
+  <Program_Info>
+    <Program_Name>RocketMouse AI</Program_Name>
+    <Program_Version>1.0</Program_Version>
+    <Program_Release_Month>03</Program_Release_Month>
+    <Program_Release_Day>11</Program_Release_Day>
+    <Program_Release_Year>2026</Program_Release_Year>
+    <Program_Cost_Dollars>398</Program_Cost_Dollars>
+    <Program_Cost_Other_Code>JPY</Program_Cost_Other_Code>
+    <Program_Cost_Other>49800</Program_Cost_Other>
+    <Program_Type>Shareware</Program_Type>
+    <Program_Release_Status>Major Update</Program_Release_Status>
+    <Program_Install_Support>No Install Support</Program_Install_Support>
+    <Program_OS_Support>macOS 14+</Program_OS_Support>
+    <Program_Language>English,Japanese</Program_Language>
+    <Program_Change_Info>Initial release for macOS</Program_Change_Info>
+    <Program_Specific_Category>Productivity</Program_Specific_Category>
+    <Program_Category_Class>Business::Other</Program_Category_Class>
+    <Program_System_Requirements>macOS 14 (Sonoma) or later, Apple Silicon or Intel Mac</Program_System_Requirements>
+    <File_Info>
+      <File_Size_Bytes>88364411</File_Size_Bytes>
+      <File_Size_K>86293</File_Size_K>
+      <File_Size_MB>84.27</File_Size_MB>
+    </File_Info>
+    <Expire_Info>
+      <Has_Expire_Info>Y</Has_Expire_Info>
+      <Expire_Count>15</Expire_Count>
+      <Expire_Based_On>Days</Expire_Based_On>
+      <Expire_Other_Info>15-day free trial, full functionality</Expire_Other_Info>
+    </Expire_Info>
+  </Program_Info>
+
+  <Program_Descriptions>
+    <English>
+      <Keywords>mac automation, rpa, macos, browser automation, web scraping, playwright, excel automation, no-code, visual programming, block editor, ai automation, ocr, macro recorder, productivity, task automation, workflow automation</Keywords>
+      <Char_Desc_45>Professional RPA automation tool for macOS</Char_Desc_45>
+      <Char_Desc_80>The first professional RPA tool built natively for macOS with AI and Playwright</Char_Desc_80>
+      <Char_Desc_250>RocketMouse AI is the first professional RPA tool built natively for macOS. Automate browser tasks, Excel data entry, file management, and more with a visual block editor. Features AI macro generation, Playwright browser automation, and OCR.</Char_Desc_250>
+      <Char_Desc_450>RocketMouse AI is the first professional RPA tool built natively for macOS. Automate browser tasks, Excel data entry, file management, and more with a visual block editor — no coding required. Features AI macro generation, Playwright-powered browser automation, OCR, and 169+ built-in operations across 24 categories. Includes dual recording modes, visual element picker, breakpoints, step execution, variable watch, and cross-platform .rmproj file compatibility with Windows.</Char_Desc_450>
+      <Char_Desc_2000>RocketMouse AI is the most powerful visual RPA automation tool ever built for macOS. Snap color-coded blocks together to automate anything on your Mac — from browser tasks and Excel spreadsheets to file operations and screen recognition. No coding required.
+
+Key Features:
+- 169+ Operations across 24 categories (Mouse, Keyboard, Browser, Excel, File, AI, Vision, and more)
+- AI Assistant — Describe your workflow in plain English; AI generates the macro instantly (OpenAI, Anthropic, Google Gemini, Groq)
+- Browser Automation — Playwright + Chrome built in. Navigate, click, fill forms, extract data. Visual element picker for CSS/XPath selectors
+- Dual Recording — Input Recording (mouse + keyboard across any app) and Browser Recording (auto-captures Chrome interactions)
+- Vision and OCR — Apple Vision-powered image recognition, template matching, and text extraction
+- Excel — 18 spreadsheet operations, native file read/write
+- Debug Tools — Breakpoints, step execution, variable watch, DryRun mode, speed control (0.1x-5.0x)
+- Cross-Platform — .rmproj files are fully compatible between macOS and Windows
+
+Built with Swift, designed for dark mode, Apple Notarized. Free 15-day trial.</Char_Desc_2000>
+    </English>
+  </Program_Descriptions>
+
+  <Web_Info>
+    <Application_URLs>
+      <Application_Info_URL>https://mojosoftjp.github.io/rocketmouse-mac/</Application_Info_URL>
+      <Application_Order_URL>https://mojosoftjp.github.io/rocketmouse-mac/pricing.html</Application_Order_URL>
+      <Application_Screenshot_URL>https://mojosoftjp.github.io/rocketmouse-mac/images/og-image.png</Application_Screenshot_URL>
+      <Application_Icon_URL>https://mojosoftjp.github.io/rocketmouse-mac/images/app-icon-128.png</Application_Icon_URL>
+      <Application_XML_File_URL>https://mojosoftjp.github.io/rocketmouse-mac/pad_file.xml</Application_XML_File_URL>
+    </Application_URLs>
+    <Download_URLs>
+      <Primary_Download_URL>https://mojosoftjp.github.io/rocketmouse-mac/download.html</Primary_Download_URL>
+      <Secondary_Download_URL></Secondary_Download_URL>
+      <Additional_Download_URL_1></Additional_Download_URL_1>
+    </Download_URLs>
+  </Web_Info>
+
+  <Permissions>
+    <Distribution_Permissions>Free to distribute the unmodified trial version.</Distribution_Permissions>
+    <EULA>https://mojosoftjp.github.io/rocketmouse-mac/license.html</EULA>
+  </Permissions>
+</XML_DIZ_INFO>
