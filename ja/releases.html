@@ -76,11 +76,39 @@
   <section class="section" style="padding-top: 0;">
     <div class="releases-timeline">
 
+      <!-- v2.0.1 -->
+      <div class="release-item reveal">
+        <div class="release-item__header">
+          <span class="release-item__version">v2.0.1</span>
+          <span class="release-item__tag">最新</span>
+          <span class="release-item__date">2026年3月29日</span>
+        </div>
+        <div class="release-item__body">
+          <p><strong>メジャーリリース: AI Vision（Computer Use）+ Apple Intelligence</strong></p>
+          <ul>
+            <li><strong>AIクリック</strong> — AIが画面を見て、説明文でUI要素をクリック。2パスリファインメントで高精度</li>
+            <li><strong>AIスマート待機</strong> — AIが画面を監視し、視覚的な条件を満たすまで待機</li>
+            <li><strong>AI OCR</strong> — Vision LLMで画面上のテキストを読み取り</li>
+            <li><strong>AI検証</strong> — AIが画面状態を確認し、条件分岐用にtrue/falseを返却</li>
+            <li><strong>AIオートパイロット</strong> — 自律エージェントループ：タスクを説明するとAIがステップごとに実行</li>
+            <li><strong>AI条件（Boolean）</strong> — if/ループブロックの条件判定にAIを使用</li>
+            <li><strong>セルフヒーリング</strong> — 画像/OCR操作が失敗した場合、AI Visionが自然言語で自動リトライ</li>
+            <li><strong>録画強化</strong> — 録画後にAIがクリック位置を分析し、AIクリックブロックへの変換を提案</li>
+            <li><strong>Apple Intelligence</strong> — macOS 26+でオンデバイスAI。APIキー不要、無料、プライベート、オフライン</li>
+            <li><strong>AI設定分離</strong> — AIアシスタント（Apple Intelligenceデフォルト）とAI Visionブロック（クラウド）で独立設定</li>
+            <li><strong>AIアシスタント改善</strong> — 応答にプロバイダ名表示、コンソールログ</li>
+            <li><strong>アプリ起動修正</strong> — .appパスが存在しない場合にアプリ名でフォールバック</li>
+            <li><strong>ブロック挿入修正</strong> — AI生成ブロックがスタートブロックチェーンの末尾に自動接続</li>
+            <li>合計196オペレーション（169から増加）</li>
+            <li>6つのAIプロバイダ: Apple Intelligence, OpenAI, Anthropic, Gemini, Groq, カスタム/ローカルLLM</li>
+          </ul>
+        </div>
+      </div>
+
       <!-- v1.0 -->
       <div class="release-item reveal">
         <div class="release-item__header">
           <span class="release-item__version">v1.0</span>
-          <span class="release-item__tag">最新</span>
           <span class="release-item__date">2026年3月4日</span>
         </div>
         <div class="release-item__body">

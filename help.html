@@ -107,7 +107,7 @@
     <div class="section__header reveal">
       <div class="section__overline">Reference</div>
       <h2 class="section__title">Operation Categories</h2>
-      <p class="section__desc">Detailed documentation for all 169 operations across 24 categories.</p>
+      <p class="section__desc">Detailed documentation for all 196 operations across 24 categories.</p>
     </div>
 
     <div class="help-grid">
@@ -257,6 +257,170 @@
         <div class="help-card__icon">&#x23FA;</div>
         <div class="help-card__title">Macro Recording</div>
         <div class="help-card__desc">Record mouse and keyboard actions automatically. The recorder generates editable blocks you can customize.</div>
+      </div>
+    </div>
+  </section>
+
+
+  <hr class="glow-line">
+
+
+  <!-- AI Vision Setup Guide -->
+  <section class="section section--alt" id="ai-vision-setup">
+    <div class="section__header reveal">
+      <div class="section__overline" style="color: var(--accent-purple);">NEW in v2.0</div>
+      <h2 class="section__title">AI Vision Setup Guide</h2>
+      <p class="section__desc">
+        AI Vision blocks (AI Click, AI Smart Wait, AI OCR, AI Validate, AI Autopilot) require a
+        Vision-capable LLM provider. Here's how to set one up.
+      </p>
+    </div>
+
+    <div style="max-width: 900px; margin: 0 auto;">
+
+      <!-- Why Two Providers -->
+      <div class="help-card reveal" style="margin-bottom: var(--space-xl);">
+        <div class="help-card__icon">&#x2753;</div>
+        <div class="help-card__title">Why are AI settings split into two?</div>
+        <div class="help-card__desc" style="max-width: none;">
+          <p style="margin-bottom: 12px;">RocketMouse AI has two types of AI features with different requirements:</p>
+          <p style="margin-bottom: 8px;"><strong>AI Assistant</strong> (chat, explain, diagnose, macro generation) &mdash; Text-only. Works with any LLM including Apple Intelligence (free, on-device, no API key needed on macOS 26+).</p>
+          <p><strong>AI Vision Blocks</strong> (AI Click, AI Smart Wait, AI OCR, AI Validate, AI Autopilot) &mdash; Requires Vision/multimodal LLM that can analyze screenshots. Cloud providers with Vision API are required.</p>
+        </div>
+      </div>
+
+      <!-- Provider Comparison Table -->
+      <h3 class="reveal" style="color: var(--text-primary); font-size: var(--text-lg); font-weight: 600; margin-bottom: var(--space-lg);">Vision-Capable Providers &amp; Recommended Models</h3>
+
+      <table class="comparison-table reveal" style="margin-bottom: var(--space-2xl);">
+        <thead>
+          <tr>
+            <th>Provider</th>
+            <th>Vision Support</th>
+            <th>Recommended Model</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>OpenAI</strong></td>
+            <td><span class="check">&#x2705;</span> Yes</td>
+            <td><code>gpt-4o</code></td>
+            <td>Best balance of speed &amp; accuracy. Also: <code>gpt-4o-mini</code> (cheaper, less accurate)</td>
+          </tr>
+          <tr>
+            <td><strong>Anthropic</strong></td>
+            <td><span class="check">&#x2705;</span> Yes</td>
+            <td><code>claude-sonnet-4-20250514</code></td>
+            <td>Excellent accuracy. Also: <code>claude-haiku-4-5-20251001</code> (faster, cheaper)</td>
+          </tr>
+          <tr>
+            <td><strong>Google Gemini</strong></td>
+            <td><span class="check">&#x2705;</span> Yes</td>
+            <td><code>gemini-2.0-flash</code></td>
+            <td>Fast and cost-effective. Also: <code>gemini-2.5-pro</code> (most capable)</td>
+          </tr>
+          <tr>
+            <td><strong>Groq</strong></td>
+            <td><span class="cross">&#x274C;</span> No</td>
+            <td>&mdash;</td>
+            <td>Text-only. Works for AI Assistant but not AI Vision blocks</td>
+          </tr>
+          <tr>
+            <td><strong>Custom / Local LLM</strong></td>
+            <td><span class="partial">&#x26A0;</span> Depends</td>
+            <td>Varies</td>
+            <td>Requires an OpenAI-compatible API with Vision support (e.g., LM Studio with a vision model)</td>
+          </tr>
+          <tr>
+            <td><strong>Apple Intelligence</strong></td>
+            <td><span class="cross">&#x274C;</span> Not yet</td>
+            <td>&mdash;</td>
+            <td>Text-only (macOS 26+). Works for AI Assistant. Vision support may come in future updates</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Step-by-Step Setup -->
+      <h3 class="reveal" style="color: var(--text-primary); font-size: var(--text-lg); font-weight: 600; margin-bottom: var(--space-lg);">Step-by-Step Setup</h3>
+
+      <div class="help-grid" style="grid-template-columns: 1fr;">
+        <div class="help-card reveal">
+          <div class="help-card__icon">1&#xFE0F;&#x20E3;</div>
+          <div class="help-card__title">Get an API Key</div>
+          <div class="help-card__desc" style="max-width: none;">
+            <p>Sign up for an account with your chosen provider:</p>
+            <ul style="margin-top: 8px; padding-left: 20px;">
+              <li><strong>OpenAI</strong>: <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener" style="color: var(--accent-blue);">platform.openai.com/api-keys</a> &mdash; Create a new secret key (starts with <code>sk-</code>)</li>
+              <li><strong>Anthropic</strong>: <a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener" style="color: var(--accent-blue);">console.anthropic.com/settings/keys</a> &mdash; Create API key (starts with <code>sk-ant-</code>)</li>
+              <li><strong>Google Gemini</strong>: <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener" style="color: var(--accent-blue);">aistudio.google.com/apikey</a> &mdash; Create API key</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="help-card reveal">
+          <div class="help-card__icon">2&#xFE0F;&#x20E3;</div>
+          <div class="help-card__title">Open AI Settings</div>
+          <div class="help-card__desc" style="max-width: none;">
+            In RocketMouse AI, go to the menu bar and select <strong>Settings &gt; AI Settings...</strong>
+            (or click the brain icon in the toolbar).
+          </div>
+        </div>
+
+        <div class="help-card reveal">
+          <div class="help-card__icon">3&#xFE0F;&#x20E3;</div>
+          <div class="help-card__title">Configure AI Vision &amp; Blocks</div>
+          <div class="help-card__desc" style="max-width: none;">
+            <p>In the <strong>"AI Vision &amp; Blocks"</strong> section:</p>
+            <ol style="margin-top: 8px; padding-left: 20px;">
+              <li>Set <strong>Default Provider</strong> to your chosen provider (e.g., OpenAI)</li>
+              <li>Paste your API key into the <strong>API Key</strong> field</li>
+              <li>Optionally change the <strong>Model</strong> (default is recommended)</li>
+              <li>Click <strong>Test</strong> to verify the connection</li>
+            </ol>
+          </div>
+        </div>
+
+        <div class="help-card reveal">
+          <div class="help-card__icon">4&#xFE0F;&#x20E3;</div>
+          <div class="help-card__title">Start Using AI Vision Blocks</div>
+          <div class="help-card__desc" style="max-width: none;">
+            Open the block palette, find the <strong>AI</strong> category (purple), and drag an AI Click block into your workspace.
+            Type a description like "Click the OK button" and run your macro!
+          </div>
+        </div>
+      </div>
+
+      <!-- Tips -->
+      <div class="help-card reveal" style="margin-top: var(--space-xl);">
+        <div class="help-card__icon">&#x1F4A1;</div>
+        <div class="help-card__title">Tips for Best Results</div>
+        <div class="help-card__desc" style="max-width: none;">
+          <ul style="padding-left: 20px;">
+            <li><strong>Be specific</strong> in descriptions: "Click the blue Submit button in the bottom right" works better than "Click submit"</li>
+            <li><strong>Use Self-Healing</strong> (in AI Vision Options) to automatically retry with AI when image/OCR operations fail</li>
+            <li><strong>Per-block override</strong>: Each AI Vision block has its own Provider and Model fields, letting you use different providers for different blocks</li>
+            <li><strong>Recording Enhancement</strong>: Record your clicks first, then let AI analyze and suggest converting them to AI Click blocks for resilience</li>
+            <li><strong>Cost tip</strong>: Use <code>gpt-4o-mini</code> or <code>gemini-2.0-flash</code> for simpler tasks to reduce API costs</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Local LLM -->
+      <div class="help-card reveal" style="margin-top: var(--space-lg);">
+        <div class="help-card__icon">&#x1F4BB;</div>
+        <div class="help-card__title">Using Local LLMs (Advanced)</div>
+        <div class="help-card__desc" style="max-width: none;">
+          <p>You can use a local Vision LLM instead of cloud providers:</p>
+          <ol style="margin-top: 8px; padding-left: 20px;">
+            <li>Install <a href="https://lmstudio.ai/" target="_blank" rel="noopener" style="color: var(--accent-blue);">LM Studio</a> or a similar tool</li>
+            <li>Download a vision-capable model (e.g., <code>llava</code>, <code>moondream</code>, <code>minicpm-v</code>)</li>
+            <li>Start the local server (usually at <code>http://localhost:1234</code>)</li>
+            <li>In AI Settings, select <strong>Custom (Local LLM)</strong> and set the Base URL</li>
+            <li>API Key can be left empty for local servers</li>
+          </ol>
+          <p style="margin-top: 8px; color: var(--text-tertiary);">Note: Local vision models may be less accurate than cloud providers like GPT-4o or Claude.</p>
+        </div>
       </div>
     </div>
   </section>
