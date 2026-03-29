@@ -437,6 +437,28 @@
         </p>
       </div>
     </div>
+
+    <!-- Hybrid Workflow Example -->
+    <div class="section__header reveal" style="margin-top: var(--space-3xl);">
+      <div class="section__overline" style="color: var(--accent-purple);">ハイブリッド実行</div>
+      <h2 class="section__title" style="font-size: var(--text-xl);">定型処理は高速・確実・無料。<br>AI は判断が必要な箇所だけ。</h2>
+      <p class="section__desc" style="max-width: 700px; margin: var(--space-lg) auto 0;">
+        定型処理は macOS ネイティブ API で高速・確実・無料。UI 変動がある箇所だけ AI が視覚的に判断。
+        コストと信頼性の最適バランスを 1 本のマクロで実現できるのは RocketMouse AI だけ。
+      </p>
+    </div>
+
+    <div class="reveal" style="max-width: 700px; margin: var(--space-xl) auto 0; display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; font-size: var(--text-sm);">
+      <span style="background: var(--bg-card); border: 1px solid var(--border-default); border-radius: 8px; padding: 8px 14px;">&#x26A1; ネイティブAPIでExcel起動</span>
+      <span style="color: var(--text-tertiary);">&rarr;</span>
+      <span style="background: var(--bg-card); border: 1px solid var(--border-default); border-radius: 8px; padding: 8px 14px;">&#x26A1; データ入力（高速）</span>
+      <span style="color: var(--text-tertiary);">&rarr;</span>
+      <span style="background: linear-gradient(135deg, rgba(167,139,250,0.15), rgba(167,139,250,0.05)); border: 1px solid rgba(167,139,250,0.3); border-radius: 8px; padding: 8px 14px;">&#x1F9E0; AI Clickで保存ボタン検出</span>
+      <span style="color: var(--text-tertiary);">&rarr;</span>
+      <span style="background: var(--bg-card); border: 1px solid var(--border-default); border-radius: 8px; padding: 8px 14px;">&#x26A1; ショートカットキー</span>
+      <span style="color: var(--text-tertiary);">&rarr;</span>
+      <span style="background: linear-gradient(135deg, rgba(167,139,250,0.15), rgba(167,139,250,0.05)); border: 1px solid rgba(167,139,250,0.3); border-radius: 8px; padding: 8px 14px;">&#x1F9E0; AI Validateで結果検証</span>
+    </div>
   </section>
 
 
@@ -506,6 +528,18 @@
           <td><span class="check">&#x2705;</span> 決定論的</td>
           <td><span class="cross">&#x274C;</span> 非決定論的</td>
           <td class="highlight-col"><span class="check">&#x2705;</span> RPA優先、AIは安全網</td>
+        </tr>
+        <tr>
+          <td>予期しないダイアログ対応</td>
+          <td><span class="cross">&#x274C;</span> 停止するしかない</td>
+          <td><span class="check">&#x2705;</span> 自己判断で対処</td>
+          <td class="highlight-col"><span class="check">&#x2705;</span> AI Autopilotが自律対処</td>
+        </tr>
+        <tr>
+          <td>ブラウザ自動化</td>
+          <td><span class="partial">&#x26A0;</span> ツールにより異なる</td>
+          <td><span class="partial">&#x26A0;</span> 画面操作のみ（DOM非対応）</td>
+          <td class="highlight-col"><span class="check">&#x2705;</span> Playwright（DOM）+ AI Vision</td>
         </tr>
         <tr>
           <td>セットアップ</td>
