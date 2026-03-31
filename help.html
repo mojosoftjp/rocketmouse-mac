@@ -309,6 +309,78 @@
         </div>
       </div>
 
+      <!-- Apple Intelligence Compatibility Table -->
+      <h3 class="reveal" style="color: var(--text-primary); font-size: var(--text-lg); font-weight: 600; margin-bottom: var(--space-lg);">Apple Intelligence Compatibility by Block</h3>
+
+      <div class="comparison-table-wrapper">
+      <table class="comparison-table reveal" style="margin-bottom: var(--space-2xl);">
+        <thead>
+          <tr>
+            <th>Block</th>
+            <th>Apple Intelligence</th>
+            <th>Cloud Provider</th>
+            <th>Reason</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>AI Assistant</strong> (Chat / Explain / Diagnose)</td>
+            <td><span class="check">&#x2705;</span> Yes (default)</td>
+            <td><span class="check">&#x2705;</span> Yes</td>
+            <td>Text-only</td>
+          </tr>
+          <tr>
+            <td><strong>AI Instruction</strong></td>
+            <td><span class="check">&#x2705;</span> Yes</td>
+            <td><span class="check">&#x2705;</span> Yes</td>
+            <td>Text-only</td>
+          </tr>
+          <tr>
+            <td><strong>AI Macro Generate</strong></td>
+            <td><span class="check">&#x2705;</span> Yes</td>
+            <td><span class="check">&#x2705;</span> Yes</td>
+            <td>Text-only</td>
+          </tr>
+          <tr>
+            <td><strong>AI Click</strong></td>
+            <td><span class="cross">&#x274C;</span> No</td>
+            <td><span class="check">&#x2705;</span> Required</td>
+            <td>Needs Vision (screenshot analysis)</td>
+          </tr>
+          <tr>
+            <td><strong>AI Smart Wait</strong></td>
+            <td><span class="cross">&#x274C;</span> No</td>
+            <td><span class="check">&#x2705;</span> Required</td>
+            <td>Needs Vision (screenshot analysis)</td>
+          </tr>
+          <tr>
+            <td><strong>AI OCR</strong></td>
+            <td><span class="cross">&#x274C;</span> No</td>
+            <td><span class="check">&#x2705;</span> Required</td>
+            <td>Needs Vision (screenshot analysis)</td>
+          </tr>
+          <tr>
+            <td><strong>AI Validate</strong></td>
+            <td><span class="cross">&#x274C;</span> No</td>
+            <td><span class="check">&#x2705;</span> Required</td>
+            <td>Needs Vision (screenshot analysis)</td>
+          </tr>
+          <tr>
+            <td><strong>AI Autopilot</strong></td>
+            <td><span class="cross">&#x274C;</span> No</td>
+            <td>Anthropic only</td>
+            <td>Computer Use API (Sonnet/Opus)</td>
+          </tr>
+          <tr>
+            <td><strong>Bool AI Condition</strong></td>
+            <td><span class="cross">&#x274C;</span> No</td>
+            <td><span class="check">&#x2705;</span> Required</td>
+            <td>Needs Vision (screenshot analysis)</td>
+          </tr>
+        </tbody>
+      </table>
+      </div>
+
       <!-- Provider Comparison Table -->
       <h3 class="reveal" style="color: var(--text-primary); font-size: var(--text-lg); font-weight: 600; margin-bottom: var(--space-lg);">Vision-Capable Providers &amp; Recommended Models</h3>
 
