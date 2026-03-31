@@ -271,8 +271,9 @@
       <div class="section__overline" style="color: var(--accent-purple);">NEW in v2.0</div>
       <h2 class="section__title">AI Vision Setup Guide</h2>
       <p class="section__desc">
-        AI Vision blocks (AI Click, AI Smart Wait, AI OCR, AI Validate, AI Autopilot) require a
-        Vision-capable LLM provider. Here's how to set one up.
+        AI Vision blocks (AI Click, AI Smart Wait, AI OCR, AI Validate, Bool AI Condition) require a
+        Vision-capable LLM provider. AI Autopilot is separate &mdash; it always uses Anthropic Computer Use API
+        and requires a dedicated Anthropic API key. Here's how to set everything up.
       </p>
     </div>
 
@@ -286,7 +287,7 @@
           <p style="margin-bottom: 12px;">AI Settings has 5 sections, each for a different purpose:</p>
           <ol style="padding-left: 20px;">
             <li style="margin-bottom: 8px;"><strong>AI Assistant</strong> &mdash; Provider for the chat panel (explain, diagnose, macro generation). Apple Intelligence is the default on macOS 26+ (free, on-device, no API key).</li>
-            <li style="margin-bottom: 8px;"><strong>Default Provider</strong> &mdash; Used for all AI Vision blocks (AI Click, AI OCR, AI Smart Wait, AI Validate). Requires a Vision-capable cloud provider.</li>
+            <li style="margin-bottom: 8px;"><strong>Default Provider</strong> &mdash; Used for all AI Vision blocks (AI Click, AI OCR, AI Smart Wait, AI Validate, Bool AI Condition). Requires a Vision-capable cloud provider.</li>
             <li style="margin-bottom: 8px;"><strong>AI Autopilot</strong> &mdash; Dedicated to the Autopilot block. Always uses Anthropic Computer Use API (Sonnet or Opus). Requires an Anthropic API key.</li>
             <li style="margin-bottom: 8px;"><strong>Provider Settings</strong> &mdash; Configure API keys, models, and temperature for each cloud provider (OpenAI, Anthropic, Gemini, Groq, Custom/Local LLM).</li>
             <li><strong>Self-Healing</strong> &mdash; When image/OCR operations fail, AI Vision automatically retries using natural language.</li>

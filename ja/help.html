@@ -90,7 +90,7 @@
     <div class="section__header reveal">
       <div class="section__overline" style="color: var(--accent-purple);">v2.0 新機能</div>
       <h2 class="section__title">AI Vision セットアップガイド</h2>
-      <p class="section__desc">AI Visionブロック（AIクリック、AIスマート待機、AI OCR、AI検証、AIオートパイロット）にはVision対応LLMプロバイダが必要です。</p>
+      <p class="section__desc">AI Visionブロック（AIクリック、AIスマート待機、AI OCR、AI検証、AI条件判定）にはVision対応LLMプロバイダが必要です。AIオートパイロットは別枠で、Anthropic Computer Use API専用（Anthropic APIキーが必要）です。</p>
     </div>
 
     <div style="max-width: 900px; margin: 0 auto;">
@@ -101,7 +101,7 @@
           <p style="margin-bottom: 12px;">AI設定は5つのセクションで構成されています:</p>
           <ol style="padding-left: 20px;">
             <li style="margin-bottom: 8px;"><strong>AIアシスタント</strong> — チャットパネル用プロバイダ（説明・診断・マクロ生成）。macOS 26+ではApple Intelligenceがデフォルト（無料・オンデバイス・APIキー不要）。</li>
-            <li style="margin-bottom: 8px;"><strong>デフォルトプロバイダ</strong> — 全AI Visionブロック共通（AIクリック、AI OCR、AIスマート待機、AI検証）。Vision対応クラウドプロバイダが必要。</li>
+            <li style="margin-bottom: 8px;"><strong>デフォルトプロバイダ</strong> — 全AI Visionブロック共通（AIクリック、AI OCR、AIスマート待機、AI検証、AI条件判定）。Vision対応クラウドプロバイダが必要。</li>
             <li style="margin-bottom: 8px;"><strong>AIオートパイロット</strong> — オートパイロットブロック専用。Anthropic Computer Use API（SonnetまたはOpus）を使用。Anthropic APIキーが必要。</li>
             <li style="margin-bottom: 8px;"><strong>各プロバイダの設定</strong> — クラウドプロバイダごとのAPIキー・モデル・Temperature設定（OpenAI、Anthropic、Gemini、Groq、カスタム/ローカルLLM）。</li>
             <li><strong>セルフヒーリング</strong> — 画像/OCR操作が失敗した場合、AI Visionが自然言語で自動リトライ。</li>
