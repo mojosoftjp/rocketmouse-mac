@@ -278,14 +278,19 @@
 
     <div style="max-width: 900px; margin: 0 auto;">
 
-      <!-- Why Two Providers -->
+      <!-- AI Settings Structure -->
       <div class="help-card reveal" style="margin-bottom: var(--space-xl);">
         <div class="help-card__icon">&#x2753;</div>
-        <div class="help-card__title">Why are AI settings split into two?</div>
+        <div class="help-card__title">How AI Settings are organized</div>
         <div class="help-card__desc" style="max-width: none;">
-          <p style="margin-bottom: 12px;">RocketMouse AI has two types of AI features with different requirements:</p>
-          <p style="margin-bottom: 8px;"><strong>AI Assistant</strong> (chat, explain, diagnose, macro generation) &mdash; Text-only. Works with any LLM including Apple Intelligence (free, on-device, no API key needed on macOS 26+).</p>
-          <p><strong>AI Vision Blocks</strong> (AI Click, AI Smart Wait, AI OCR, AI Validate, AI Autopilot) &mdash; Requires Vision/multimodal LLM that can analyze screenshots. Cloud providers with Vision API are required.</p>
+          <p style="margin-bottom: 12px;">AI Settings has 5 sections, each for a different purpose:</p>
+          <ol style="padding-left: 20px;">
+            <li style="margin-bottom: 8px;"><strong>AI Assistant</strong> &mdash; Provider for the chat panel (explain, diagnose, macro generation). Apple Intelligence is the default on macOS 26+ (free, on-device, no API key).</li>
+            <li style="margin-bottom: 8px;"><strong>Default Provider</strong> &mdash; Used for all AI Vision blocks (AI Click, AI OCR, AI Smart Wait, AI Validate). Requires a Vision-capable cloud provider.</li>
+            <li style="margin-bottom: 8px;"><strong>AI Autopilot</strong> &mdash; Dedicated to the Autopilot block. Always uses Anthropic Computer Use API (Sonnet or Opus). Requires an Anthropic API key.</li>
+            <li style="margin-bottom: 8px;"><strong>Provider Settings</strong> &mdash; Configure API keys, models, and temperature for each cloud provider (OpenAI, Anthropic, Gemini, Groq, Custom/Local LLM).</li>
+            <li><strong>Self-Healing</strong> &mdash; When image/OCR operations fail, AI Vision automatically retries using natural language.</li>
+          </ol>
         </div>
       </div>
 
@@ -469,14 +474,13 @@
 
         <div class="help-card reveal">
           <div class="help-card__icon">3&#xFE0F;&#x20E3;</div>
-          <div class="help-card__title">Configure AI Vision &amp; Blocks</div>
+          <div class="help-card__title">Configure Default Provider &amp; API Key</div>
           <div class="help-card__desc" style="max-width: none;">
-            <p>In the <strong>"AI Vision &amp; Blocks"</strong> section:</p>
             <ol style="margin-top: 8px; padding-left: 20px;">
-              <li>Set <strong>Default Provider</strong> to your chosen provider (e.g., OpenAI)</li>
-              <li>Paste your API key into the <strong>API Key</strong> field</li>
-              <li>Optionally change the <strong>Model</strong> (default is recommended)</li>
-              <li>Click <strong>Test</strong> to verify the connection</li>
+              <li>In the <strong>"Default Provider"</strong> section, select your provider (e.g., OpenAI, Gemini)</li>
+              <li>Scroll down to <strong>"Provider Settings"</strong> and expand your chosen provider</li>
+              <li>Paste your API key and click <strong>Test</strong> to verify</li>
+              <li>For AI Autopilot: expand <strong>Anthropic</strong> and enter the API key (required separately)</li>
             </ol>
           </div>
         </div>
