@@ -85,7 +85,7 @@
         <div class="help-card__title">AIクリック</div>
         <div class="help-card__desc" style="max-width: none;">
           <p style="margin-bottom: 8px;">AIが画面を見て、自然言語で指定したUI要素をクリック。画面端では2パスリファインメントで高精度。</p>
-          <p style="margin-bottom: 8px;"><strong>パラメータ:</strong> description（必須）、button（Left/Right/Middle）、clickType（Single/Double）、provider、model、outputX、outputY</p>
+          <p style="margin-bottom: 8px;"><strong>パラメータ:</strong> プロンプト（必須）、button（Left/Right/Middle）、clickType（Single/Double）、provider、model、outputX、outputY</p>
           <p style="margin-bottom: 4px;"><strong>プロンプト例:</strong></p>
           <ul style="padding-left: 20px; color: var(--text-secondary);">
             <li><code>「保存ボタンをクリック」</code></li>
@@ -102,7 +102,7 @@
         <div class="help-card__title">AIスマート待機</div>
         <div class="help-card__desc" style="max-width: none;">
           <p style="margin-bottom: 8px;">AIが画面を定期的に監視し、条件が満たされるまで待機。固定待機の代わりに視覚的な条件判定。</p>
-          <p style="margin-bottom: 8px;"><strong>パラメータ:</strong> description（必須）、timeoutMs（デフォルト: 30000）、pollingMs（デフォルト: 2000、最小: 500）、provider、model</p>
+          <p style="margin-bottom: 8px;"><strong>パラメータ:</strong> プロンプト（必須）、timeoutMs（デフォルト: 30000）、pollingMs（デフォルト: 2000、最小: 500）、provider、model</p>
           <p style="margin-bottom: 4px;"><strong>プロンプト例:</strong></p>
           <ul style="padding-left: 20px; color: var(--text-secondary);">
             <li><code>「ダウンロード完了ダイアログが閉じた」</code></li>
@@ -135,7 +135,7 @@
         <div class="help-card__title">AI検証</div>
         <div class="help-card__desc" style="max-width: none;">
           <p style="margin-bottom: 8px;">AIが画面状態を確認しtrue/falseを返す。操作結果の検証や条件分岐に最適。</p>
-          <p style="margin-bottom: 8px;"><strong>パラメータ:</strong> description（必須）、outputVariable（デフォルト: AiValidateResult）、provider、model</p>
+          <p style="margin-bottom: 8px;"><strong>パラメータ:</strong> プロンプト（必須）、outputVariable（デフォルト: AiValidateResult）、provider、model</p>
           <p style="margin-bottom: 4px;"><strong>プロンプト例:</strong></p>
           <ul style="padding-left: 20px; color: var(--text-secondary);">
             <li><code>「ファイルが正常に保存された」</code></li>
@@ -151,7 +151,7 @@
         <div class="help-card__title">AIオートパイロット</div>
         <div class="help-card__desc" style="max-width: none;">
           <p style="margin-bottom: 8px;">画面を完全自律制御する自律エージェント。Anthropic Computer Use API（Claude Sonnet 4.6 / Opus 4.6）搭載。スクリーンショット撮影→推論→クリック・入力・スクロールを繰り返しタスク完了まで自動操作。</p>
-          <p style="margin-bottom: 8px;"><strong>パラメータ:</strong> task（必須）、maxSteps（デフォルト: 30、最大: 200）、timeoutSeconds（デフォルト: 120、最大: 600）、outputVariable、provider、model</p>
+          <p style="margin-bottom: 8px;"><strong>パラメータ:</strong> プロンプト（必須）、maxSteps（デフォルト: 30、最大: 200）、timeoutSeconds（デフォルト: 120、最大: 600）、outputVariable、provider、model</p>
           <p style="margin-bottom: 4px;"><strong>プロンプト例:</strong></p>
           <ul style="padding-left: 20px; color: var(--text-secondary);">
             <li><code>「電卓アプリを起動して2+5を計算して」</code></li>
@@ -184,7 +184,7 @@
         <div class="help-card__title">AI条件判定</div>
         <div class="help-card__desc" style="max-width: none;">
           <p style="margin-bottom: 8px;">AI Visionで画面状態を判定するBoolean（六角形）ブロック。if/whileブロックの条件に使用。</p>
-          <p style="margin-bottom: 8px;"><strong>パラメータ:</strong> description（必須）、provider、model</p>
+          <p style="margin-bottom: 8px;"><strong>パラメータ:</strong> プロンプト（必須）、provider、model</p>
           <p style="margin-bottom: 4px;"><strong>プロンプト例:</strong></p>
           <ul style="padding-left: 20px; color: var(--text-secondary);">
             <li><code>「ログイン画面が表示されている」</code></li>

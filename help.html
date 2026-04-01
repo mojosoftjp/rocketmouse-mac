@@ -231,7 +231,7 @@
         <div class="help-card__title">AI Click</div>
         <div class="help-card__desc" style="max-width: none;">
           <p style="margin-bottom: 8px;">AI sees the screen and clicks any UI element by natural language description. Uses 2-pass refinement for screen-edge accuracy.</p>
-          <p style="margin-bottom: 8px;"><strong>Parameters:</strong> description (required), button (Left/Right/Middle), clickType (Single/Double), provider, model, outputX, outputY</p>
+          <p style="margin-bottom: 8px;"><strong>Parameters:</strong> prompt (required), button (Left/Right/Middle), clickType (Single/Double), provider, model, outputX, outputY</p>
           <p style="margin-bottom: 4px;"><strong>Prompt examples:</strong></p>
           <ul style="padding-left: 20px; color: var(--text-secondary);">
             <li><code>"Click the Save button"</code></li>
@@ -249,7 +249,7 @@
         <div class="help-card__title">AI Smart Wait</div>
         <div class="help-card__desc" style="max-width: none;">
           <p style="margin-bottom: 8px;">AI monitors the screen at regular intervals and waits until a described condition is met. Replaces fixed-time waits with intelligent visual checks.</p>
-          <p style="margin-bottom: 8px;"><strong>Parameters:</strong> description (required), timeoutMs (default: 30000), pollingMs (default: 2000, min: 500), provider, model</p>
+          <p style="margin-bottom: 8px;"><strong>Parameters:</strong> prompt (required), timeoutMs (default: 30000), pollingMs (default: 2000, min: 500), provider, model</p>
           <p style="margin-bottom: 4px;"><strong>Prompt examples:</strong></p>
           <ul style="padding-left: 20px; color: var(--text-secondary);">
             <li><code>"The download progress dialog has closed"</code></li>
@@ -284,7 +284,7 @@
         <div class="help-card__title">AI Validate</div>
         <div class="help-card__desc" style="max-width: none;">
           <p style="margin-bottom: 8px;">AI checks the screen and returns true/false. Ideal for verifying that an action succeeded before proceeding.</p>
-          <p style="margin-bottom: 8px;"><strong>Parameters:</strong> description (required), outputVariable (default: AiValidateResult), provider, model</p>
+          <p style="margin-bottom: 8px;"><strong>Parameters:</strong> prompt (required), outputVariable (default: AiValidateResult), provider, model</p>
           <p style="margin-bottom: 4px;"><strong>Prompt examples:</strong></p>
           <ul style="padding-left: 20px; color: var(--text-secondary);">
             <li><code>"The file was saved successfully"</code></li>
@@ -301,7 +301,7 @@
         <div class="help-card__title">AI Autopilot</div>
         <div class="help-card__desc" style="max-width: none;">
           <p style="margin-bottom: 8px;">Autonomous agent that takes full control of the screen to complete a described task. Powered by Anthropic Computer Use API (Claude Sonnet 4.6 / Opus 4.6). The AI captures screenshots, reasons about the next action, clicks, types, scrolls, and repeats until the task is done.</p>
-          <p style="margin-bottom: 8px;"><strong>Parameters:</strong> task (required), maxSteps (default: 30, max: 200), timeoutSeconds (default: 120, max: 600), outputVariable, provider, model</p>
+          <p style="margin-bottom: 8px;"><strong>Parameters:</strong> prompt (required), maxSteps (default: 30, max: 200), timeoutSeconds (default: 120, max: 600), outputVariable, provider, model</p>
           <p style="margin-bottom: 4px;"><strong>Prompt examples:</strong></p>
           <ul style="padding-left: 20px; color: var(--text-secondary);">
             <li><code>"Open the Calculator app and compute 2 + 5"</code></li>
@@ -336,7 +336,7 @@
         <div class="help-card__title">Bool AI Condition</div>
         <div class="help-card__desc" style="max-width: none;">
           <p style="margin-bottom: 8px;">A Boolean (hexagonal) block that uses AI Vision to evaluate true/false conditions. Use inside if/while blocks for visual condition branching.</p>
-          <p style="margin-bottom: 8px;"><strong>Parameters:</strong> description (required), provider, model</p>
+          <p style="margin-bottom: 8px;"><strong>Parameters:</strong> prompt (required), provider, model</p>
           <p style="margin-bottom: 4px;"><strong>Prompt examples:</strong></p>
           <ul style="padding-left: 20px; color: var(--text-secondary);">
             <li><code>"The login screen is showing"</code></li>
