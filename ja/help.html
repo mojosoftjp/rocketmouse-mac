@@ -71,6 +71,189 @@
     </div>
   </section>
   <hr class="glow-line">
+  <!-- AIブロック詳細ガイド -->
+  <section class="section" id="ai-blocks-guide">
+    <div class="section__header reveal">
+      <div class="section__overline" style="color: var(--accent-purple);">AIブロックガイド</div>
+      <h2 class="section__title">AIブロック詳細 &amp; プロンプト例</h2>
+      <p class="section__desc">各AIブロックのパラメータ、使い方、プロンプト例を解説します。</p>
+    </div>
+
+    <div style="max-width: 900px; margin: 0 auto;">
+      <div class="help-card reveal" style="margin-bottom: var(--space-lg);">
+        <div class="help-card__icon">&#x1F441;</div>
+        <div class="help-card__title">AIクリック</div>
+        <div class="help-card__desc" style="max-width: none;">
+          <p style="margin-bottom: 8px;">AIが画面を見て、自然言語で指定したUI要素をクリック。画面端では2パスリファインメントで高精度。</p>
+          <p style="margin-bottom: 8px;"><strong>パラメータ:</strong> description（必須）、button（Left/Right/Middle）、clickType（Single/Double）、provider、model、outputX、outputY</p>
+          <p style="margin-bottom: 4px;"><strong>プロンプト例:</strong></p>
+          <ul style="padding-left: 20px; color: var(--text-secondary);">
+            <li><code>「保存ボタンをクリック」</code></li>
+            <li><code>「Finderのファイルメニュー」</code></li>
+            <li><code>「ウィンドウ左上の赤い閉じるボタン」</code></li>
+            <li><code>「Safariの検索フィールド」</code></li>
+          </ul>
+          <p style="margin-top: 8px; color: var(--text-tertiary); font-size: 11px;">ヒント: 位置や外観を具体的に。「右下の青い送信ボタン」は「送信」より正確です。</p>
+        </div>
+      </div>
+
+      <div class="help-card reveal" style="margin-bottom: var(--space-lg);">
+        <div class="help-card__icon">&#x23F3;</div>
+        <div class="help-card__title">AIスマート待機</div>
+        <div class="help-card__desc" style="max-width: none;">
+          <p style="margin-bottom: 8px;">AIが画面を定期的に監視し、条件が満たされるまで待機。固定待機の代わりに視覚的な条件判定。</p>
+          <p style="margin-bottom: 8px;"><strong>パラメータ:</strong> description（必須）、timeoutMs（デフォルト: 30000）、pollingMs（デフォルト: 2000、最小: 500）、provider、model</p>
+          <p style="margin-bottom: 4px;"><strong>プロンプト例:</strong></p>
+          <ul style="padding-left: 20px; color: var(--text-secondary);">
+            <li><code>「ダウンロード完了ダイアログが閉じた」</code></li>
+            <li><code>「メモアプリのウィンドウが画面に表示されている」</code></li>
+            <li><code>「ローディングスピナーが消えた」</code></li>
+            <li><code>「OKボタンのある確認ダイアログが表示されている」</code></li>
+          </ul>
+          <p style="margin-top: 8px; color: var(--text-tertiary); font-size: 11px;">ヒント: 視覚的に確認できる具体的な条件を。「メモアプリのウィンドウが画面に表示されている」は「メモが開いている」より正確。</p>
+        </div>
+      </div>
+
+      <div class="help-card reveal" style="margin-bottom: var(--space-lg);">
+        <div class="help-card__icon">&#x1F4D6;</div>
+        <div class="help-card__title">AI OCR</div>
+        <div class="help-card__desc" style="max-width: none;">
+          <p style="margin-bottom: 8px;">AIが画面上のテキストを読み取り変数に格納。どんなフォント・言語・アプリでも対応。</p>
+          <p style="margin-bottom: 8px;"><strong>パラメータ:</strong> prompt（必須）、outputVariable（デフォルト: AiOcrResult）、provider、model</p>
+          <p style="margin-bottom: 4px;"><strong>プロンプト例:</strong></p>
+          <ul style="padding-left: 20px; color: var(--text-secondary);">
+            <li><code>「画面に表示されている合計金額を読み取って」</code></li>
+            <li><code>「メモアプリのテキストを読み取って」</code></li>
+            <li><code>「ダイアログのエラーメッセージを読み取って」</code></li>
+            <li><code>「アクティブウィンドウのタイトルを読み取って」</code></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="help-card reveal" style="margin-bottom: var(--space-lg);">
+        <div class="help-card__icon">&#x2705;</div>
+        <div class="help-card__title">AI検証</div>
+        <div class="help-card__desc" style="max-width: none;">
+          <p style="margin-bottom: 8px;">AIが画面状態を確認しtrue/falseを返す。操作結果の検証や条件分岐に最適。</p>
+          <p style="margin-bottom: 8px;"><strong>パラメータ:</strong> description（必須）、outputVariable（デフォルト: AiValidateResult）、provider、model</p>
+          <p style="margin-bottom: 4px;"><strong>プロンプト例:</strong></p>
+          <ul style="padding-left: 20px; color: var(--text-secondary);">
+            <li><code>「ファイルが正常に保存された」</code></li>
+            <li><code>「ログイン画面が表示されている」</code></li>
+            <li><code>「エラーメッセージが表示されている」</code></li>
+            <li><code>「チェックボックスがオンになっている」</code></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="help-card reveal" style="margin-bottom: var(--space-lg);">
+        <div class="help-card__icon">&#x1F680;</div>
+        <div class="help-card__title">AIオートパイロット</div>
+        <div class="help-card__desc" style="max-width: none;">
+          <p style="margin-bottom: 8px;">画面を完全自律制御する自律エージェント。Anthropic Computer Use API（Claude Sonnet 4.6 / Opus 4.6）搭載。スクリーンショット撮影→推論→クリック・入力・スクロールを繰り返しタスク完了まで自動操作。</p>
+          <p style="margin-bottom: 8px;"><strong>パラメータ:</strong> task（必須）、maxSteps（デフォルト: 30、最大: 200）、timeoutSeconds（デフォルト: 120、最大: 600）、outputVariable、provider、model</p>
+          <p style="margin-bottom: 4px;"><strong>プロンプト例:</strong></p>
+          <ul style="padding-left: 20px; color: var(--text-secondary);">
+            <li><code>「電卓アプリを起動して2+5を計算して」</code></li>
+            <li><code>「テキストエディットを開いてHello Worldと入力して保存して」</code></li>
+            <li><code>「システム設定を開いてダークモードを有効にして」</code></li>
+            <li><code>「Safariを開いてapple.comにアクセスして」</code></li>
+          </ul>
+          <p style="margin-top: 8px; color: var(--text-tertiary); font-size: 11px;">注意: Anthropic APIキーが必要。デフォルトはSonnet（高速・低コスト）。複雑なタスクにはAI設定でOpusに変更。</p>
+        </div>
+      </div>
+
+      <div class="help-card reveal" style="margin-bottom: var(--space-lg);">
+        <div class="help-card__icon">&#x1F4AC;</div>
+        <div class="help-card__title">AI指示</div>
+        <div class="help-card__desc" style="max-width: none;">
+          <p style="margin-bottom: 8px;">テキストプロンプトをLLMに送信し、応答を変数に格納。テキスト専用（画面キャプチャなし）。Apple Intelligenceでも動作。</p>
+          <p style="margin-bottom: 8px;"><strong>パラメータ:</strong> prompt（必須）、outputVariable、provider、model</p>
+          <p style="margin-bottom: 4px;"><strong>プロンプト例:</strong></p>
+          <ul style="padding-left: 20px; color: var(--text-secondary);">
+            <li><code>「以下のテキストを3文で要約して: {=myText}」</code></li>
+            <li><code>「英語に翻訳して: {=japaneseText}」</code></li>
+            <li><code>「以下のメールにプロフェッショナルな返信を作成: {=emailContent}」</code></li>
+            <li><code>「{=price}の10%の税額を計算して」</code></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="help-card reveal" style="margin-bottom: var(--space-lg);">
+        <div class="help-card__icon">&#x1F536;</div>
+        <div class="help-card__title">AI条件判定</div>
+        <div class="help-card__desc" style="max-width: none;">
+          <p style="margin-bottom: 8px;">AI Visionで画面状態を判定するBoolean（六角形）ブロック。if/whileブロックの条件に使用。</p>
+          <p style="margin-bottom: 8px;"><strong>パラメータ:</strong> description（必須）、provider、model</p>
+          <p style="margin-bottom: 4px;"><strong>プロンプト例:</strong></p>
+          <ul style="padding-left: 20px; color: var(--text-secondary);">
+            <li><code>「ログイン画面が表示されている」</code></li>
+            <li><code>「画面にエラーメッセージがある」</code></li>
+            <li><code>「ファイルのダウンロードが完了した」</code></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="help-card reveal" style="margin-bottom: var(--space-lg);">
+        <div class="help-card__icon">&#x2B50;</div>
+        <div class="help-card__title">用途別おすすめモデル</div>
+        <div class="help-card__desc" style="max-width: none;">
+          <table style="width: 100%; font-size: 12px; border-collapse: collapse; margin-top: 8px;">
+            <tr style="border-bottom: 1px solid var(--border-subtle);"><td style="padding: 6px 0;"><strong>AIクリック（高精度）</strong></td><td style="padding: 6px 0; color: var(--text-secondary);">Claude Sonnet 4.6、GPT-4o</td></tr>
+            <tr style="border-bottom: 1px solid var(--border-subtle);"><td style="padding: 6px 0;"><strong>AIクリック（低コスト）</strong></td><td style="padding: 6px 0; color: var(--text-secondary);">Gemini 2.0 Flash、GPT-4o-mini</td></tr>
+            <tr style="border-bottom: 1px solid var(--border-subtle);"><td style="padding: 6px 0;"><strong>AIスマート待機 / AI検証</strong></td><td style="padding: 6px 0; color: var(--text-secondary);">どのVisionモデルでもOK（Yes/No判定）</td></tr>
+            <tr style="border-bottom: 1px solid var(--border-subtle);"><td style="padding: 6px 0;"><strong>AI OCR</strong></td><td style="padding: 6px 0; color: var(--text-secondary);">Claude Sonnet 4.6、GPT-4o（複雑なレイアウト向け）</td></tr>
+            <tr style="border-bottom: 1px solid var(--border-subtle);"><td style="padding: 6px 0;"><strong>AIオートパイロット</strong></td><td style="padding: 6px 0; color: var(--text-secondary);">Claude Sonnet 4.6（高速）、Claude Opus 4.6（最高性能）</td></tr>
+            <tr><td style="padding: 6px 0;"><strong>AI指示</strong></td><td style="padding: 6px 0; color: var(--text-secondary);">Apple Intelligence（無料）、Gemini Flash（低コスト）、GPT-4o（高品質）</td></tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="glow-line">
+
+  <!-- 実行 & デバッグ -->
+  <section class="section section--alt" id="execution-debug">
+    <div class="section__header reveal"><div class="section__overline">リファレンス</div><h2 class="section__title">実行 &amp; デバッグ</h2></div>
+    <div class="help-grid" style="max-width: 900px; margin: 0 auto;">
+      <div class="help-card reveal"><div class="help-card__icon">&#x25B6;&#xFE0F;</div><div class="help-card__title">マクロ実行</div><div class="help-card__desc">再生ボタンでスタートブロックから実行。実行中ブロックは緑色ハイライト。一時停止/再開/ステップ実行対応。速度0.1x〜5.0x調整可能。</div></div>
+      <div class="help-card reveal"><div class="help-card__icon">&#x1F41E;</div><div class="help-card__title">ブレークポイント</div><div class="help-card__desc">ブロック右クリックまたはF9で赤い点を設定。マクロは該当ブロック直前で一時停止し、変数確認やステップ実行が可能。</div></div>
+      <div class="help-card reveal"><div class="help-card__icon">&#x1F9EA;</div><div class="help-card__title">DryRunモード</div><div class="help-card__desc">マウス/キーボード操作を実際に実行せずロジックをテスト。フロー・条件分岐・変数値を安全に検証。</div></div>
+      <div class="help-card reveal"><div class="help-card__icon">&#x1F4CA;</div><div class="help-card__title">変数ウォッチ</div><div class="help-card__desc">変数タブで実行中の値をリアルタイム表示。パラメータ内で <code>{=変数名}</code> で参照。ループ変数: <code>{=_loopIndex}</code>, <code>{=_loopIteration}</code>。</div></div>
+      <div class="help-card reveal"><div class="help-card__icon">&#x1F4DD;</div><div class="help-card__title">カスタム関数</div><div class="help-card__desc">FunctionDefine（ハット）で定義、FunctionCallで呼び出し、FunctionReturn（キャップ）で値を返す。再帰は100レベルまで対応。</div></div>
+      <div class="help-card reveal"><div class="help-card__icon">&#x23FA;</div><div class="help-card__title">録画機能</div><div class="help-card__desc">録画ボタンでマウスクリック・キー入力・スクロールを自動記録。録画後、AIが各クリック位置を分析しAIクリックブロックへの変換を提案可能。</div></div>
+    </div>
+  </section>
+
+  <hr class="glow-line">
+
+  <!-- キーボードショートカット -->
+  <section class="section" id="shortcuts">
+    <div class="section__header reveal"><div class="section__overline">リファレンス</div><h2 class="section__title">キーボードショートカット</h2></div>
+    <div style="max-width: 600px; margin: 0 auto;">
+      <table class="comparison-table reveal" style="font-size: 13px;">
+        <tbody>
+          <tr><td><code>Cmd+Z</code></td><td>元に戻す</td></tr>
+          <tr><td><code>Cmd+Shift+Z</code></td><td>やり直し</td></tr>
+          <tr><td><code>Cmd+C</code> / <code>Cmd+V</code></td><td>コピー / 貼り付け</td></tr>
+          <tr><td><code>Cmd+D</code></td><td>選択を複製</td></tr>
+          <tr><td><code>Cmd+A</code></td><td>全ブロック選択</td></tr>
+          <tr><td><code>Delete</code></td><td>選択ブロック削除</td></tr>
+          <tr><td><code>Cmd+S</code></td><td>プロジェクト保存</td></tr>
+          <tr><td><code>Cmd+Shift+S</code></td><td>名前を付けて保存</td></tr>
+          <tr><td><code>Cmd+F</code></td><td>ブロック検索</td></tr>
+          <tr><td><code>Home</code></td><td>ズームして全体表示</td></tr>
+          <tr><td><code>F9</code></td><td>ブレークポイント切替</td></tr>
+          <tr><td><code>Cmd+Shift+F</code></td><td>Cブロック展開/折りたたみ</td></tr>
+          <tr><td><code>Escape</code></td><td>選択解除</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <hr class="glow-line">
+
   <section class="section" id="editor">
     <div class="section__header reveal"><div class="section__overline">ガイド</div><h2 class="section__title">ブロックエディタ</h2></div>
     <div class="help-grid" style="max-width:900px;margin:0 auto;">

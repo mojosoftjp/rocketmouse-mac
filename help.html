@@ -215,6 +215,260 @@
   <hr class="glow-line">
 
 
+  <!-- AI Blocks Detail Guide -->
+  <section class="section" id="ai-blocks-guide">
+    <div class="section__header reveal">
+      <div class="section__overline" style="color: var(--accent-purple);">AI Blocks Guide</div>
+      <h2 class="section__title">AI Block Details &amp; Prompt Examples</h2>
+      <p class="section__desc">Each AI block explained with parameters, use cases, and example prompts.</p>
+    </div>
+
+    <div style="max-width: 900px; margin: 0 auto;">
+
+      <!-- AI Click -->
+      <div class="help-card reveal" style="margin-bottom: var(--space-lg);">
+        <div class="help-card__icon">&#x1F441;</div>
+        <div class="help-card__title">AI Click</div>
+        <div class="help-card__desc" style="max-width: none;">
+          <p style="margin-bottom: 8px;">AI sees the screen and clicks any UI element by natural language description. Uses 2-pass refinement for screen-edge accuracy.</p>
+          <p style="margin-bottom: 8px;"><strong>Parameters:</strong> description (required), button (Left/Right/Middle), clickType (Single/Double), provider, model, outputX, outputY</p>
+          <p style="margin-bottom: 4px;"><strong>Prompt examples:</strong></p>
+          <ul style="padding-left: 20px; color: var(--text-secondary);">
+            <li><code>"Click the Save button"</code></li>
+            <li><code>"Click the File menu in Finder"</code></li>
+            <li><code>"Click the red close button on the top-left of the window"</code></li>
+            <li><code>"Click the search field in Safari"</code></li>
+          </ul>
+          <p style="margin-top: 8px; color: var(--text-tertiary); font-size: 11px;">Tip: Be specific about location and appearance. "the blue Submit button in the bottom right" works better than "Submit".</p>
+        </div>
+      </div>
+
+      <!-- AI Smart Wait -->
+      <div class="help-card reveal" style="margin-bottom: var(--space-lg);">
+        <div class="help-card__icon">&#x23F3;</div>
+        <div class="help-card__title">AI Smart Wait</div>
+        <div class="help-card__desc" style="max-width: none;">
+          <p style="margin-bottom: 8px;">AI monitors the screen at regular intervals and waits until a described condition is met. Replaces fixed-time waits with intelligent visual checks.</p>
+          <p style="margin-bottom: 8px;"><strong>Parameters:</strong> description (required), timeoutMs (default: 30000), pollingMs (default: 2000, min: 500), provider, model</p>
+          <p style="margin-bottom: 4px;"><strong>Prompt examples:</strong></p>
+          <ul style="padding-left: 20px; color: var(--text-secondary);">
+            <li><code>"The download progress dialog has closed"</code></li>
+            <li><code>"The Notes app window is visible on screen"</code></li>
+            <li><code>"The loading spinner has disappeared"</code></li>
+            <li><code>"A confirmation dialog with an OK button is showing"</code></li>
+          </ul>
+          <p style="margin-top: 8px; color: var(--text-tertiary); font-size: 11px;">Tip: Use specific, visually verifiable conditions. "The Notes app window is visible on screen" is better than "Notes is open".</p>
+        </div>
+      </div>
+
+      <!-- AI OCR -->
+      <div class="help-card reveal" style="margin-bottom: var(--space-lg);">
+        <div class="help-card__icon">&#x1F4D6;</div>
+        <div class="help-card__title">AI OCR</div>
+        <div class="help-card__desc" style="max-width: none;">
+          <p style="margin-bottom: 8px;">AI reads text from the screen and stores it in a variable. Works with any font, any language, any app.</p>
+          <p style="margin-bottom: 8px;"><strong>Parameters:</strong> prompt (required), outputVariable (default: AiOcrResult), provider, model</p>
+          <p style="margin-bottom: 4px;"><strong>Prompt examples:</strong></p>
+          <ul style="padding-left: 20px; color: var(--text-secondary);">
+            <li><code>"Read the total price shown on screen"</code></li>
+            <li><code>"Read all text in the Notes app"</code></li>
+            <li><code>"Read the error message in the dialog"</code></li>
+            <li><code>"Read the title of the active window"</code></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- AI Validate -->
+      <div class="help-card reveal" style="margin-bottom: var(--space-lg);">
+        <div class="help-card__icon">&#x2705;</div>
+        <div class="help-card__title">AI Validate</div>
+        <div class="help-card__desc" style="max-width: none;">
+          <p style="margin-bottom: 8px;">AI checks the screen and returns true/false. Ideal for verifying that an action succeeded before proceeding.</p>
+          <p style="margin-bottom: 8px;"><strong>Parameters:</strong> description (required), outputVariable (default: AiValidateResult), provider, model</p>
+          <p style="margin-bottom: 4px;"><strong>Prompt examples:</strong></p>
+          <ul style="padding-left: 20px; color: var(--text-secondary);">
+            <li><code>"The file was saved successfully"</code></li>
+            <li><code>"The login page is showing"</code></li>
+            <li><code>"An error message is displayed"</code></li>
+            <li><code>"The checkbox is checked"</code></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- AI Autopilot -->
+      <div class="help-card reveal" style="margin-bottom: var(--space-lg);">
+        <div class="help-card__icon">&#x1F680;</div>
+        <div class="help-card__title">AI Autopilot</div>
+        <div class="help-card__desc" style="max-width: none;">
+          <p style="margin-bottom: 8px;">Autonomous agent that takes full control of the screen to complete a described task. Powered by Anthropic Computer Use API (Claude Sonnet 4.6 / Opus 4.6). The AI captures screenshots, reasons about the next action, clicks, types, scrolls, and repeats until the task is done.</p>
+          <p style="margin-bottom: 8px;"><strong>Parameters:</strong> task (required), maxSteps (default: 30, max: 200), timeoutSeconds (default: 120, max: 600), outputVariable, provider, model</p>
+          <p style="margin-bottom: 4px;"><strong>Prompt examples:</strong></p>
+          <ul style="padding-left: 20px; color: var(--text-secondary);">
+            <li><code>"Open the Calculator app and compute 2 + 5"</code></li>
+            <li><code>"Open TextEdit, type Hello World, and save to Desktop"</code></li>
+            <li><code>"Open System Settings and enable Dark Mode"</code></li>
+            <li><code>"Open Safari, navigate to apple.com, and take a screenshot"</code></li>
+          </ul>
+          <p style="margin-top: 8px; color: var(--text-tertiary); font-size: 11px;">Note: Requires Anthropic API key. Uses Sonnet by default (fast &amp; affordable). Switch to Opus in AI Settings for complex tasks. Cmd+Space (Spotlight) is unavailable via automation &mdash; the AI uses Launchpad to open apps.</p>
+        </div>
+      </div>
+
+      <!-- AI Instruction -->
+      <div class="help-card reveal" style="margin-bottom: var(--space-lg);">
+        <div class="help-card__icon">&#x1F4AC;</div>
+        <div class="help-card__title">AI Instruction</div>
+        <div class="help-card__desc" style="max-width: none;">
+          <p style="margin-bottom: 8px;">Send a text prompt to any LLM and store the response in a variable. Text-only (no screen capture). Works with Apple Intelligence.</p>
+          <p style="margin-bottom: 8px;"><strong>Parameters:</strong> prompt (required), outputVariable, provider, model</p>
+          <p style="margin-bottom: 4px;"><strong>Prompt examples:</strong></p>
+          <ul style="padding-left: 20px; color: var(--text-secondary);">
+            <li><code>"Summarize the following text in 3 sentences: {=myText}"</code></li>
+            <li><code>"Translate to English: {=japaneseText}"</code></li>
+            <li><code>"Generate a professional email reply to: {=emailContent}"</code></li>
+            <li><code>"Calculate the tax for {=price} at 10%"</code></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bool AI Condition -->
+      <div class="help-card reveal" style="margin-bottom: var(--space-lg);">
+        <div class="help-card__icon">&#x1F536;</div>
+        <div class="help-card__title">Bool AI Condition</div>
+        <div class="help-card__desc" style="max-width: none;">
+          <p style="margin-bottom: 8px;">A Boolean (hexagonal) block that uses AI Vision to evaluate true/false conditions. Use inside if/while blocks for visual condition branching.</p>
+          <p style="margin-bottom: 8px;"><strong>Parameters:</strong> description (required), provider, model</p>
+          <p style="margin-bottom: 4px;"><strong>Prompt examples:</strong></p>
+          <ul style="padding-left: 20px; color: var(--text-secondary);">
+            <li><code>"The login screen is showing"</code></li>
+            <li><code>"There is an error message on screen"</code></li>
+            <li><code>"The file download is complete"</code></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Recommended Models -->
+      <div class="help-card reveal" style="margin-bottom: var(--space-lg);">
+        <div class="help-card__icon">&#x2B50;</div>
+        <div class="help-card__title">Recommended Models by Use Case</div>
+        <div class="help-card__desc" style="max-width: none;">
+          <table style="width: 100%; font-size: 12px; border-collapse: collapse; margin-top: 8px;">
+            <tr style="border-bottom: 1px solid var(--border-subtle);">
+              <td style="padding: 6px 0;"><strong>AI Click (high precision)</strong></td>
+              <td style="padding: 6px 0; color: var(--text-secondary);">Claude Sonnet 4.6, GPT-4o</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-subtle);">
+              <td style="padding: 6px 0;"><strong>AI Click (budget)</strong></td>
+              <td style="padding: 6px 0; color: var(--text-secondary);">Gemini 2.0 Flash, GPT-4o-mini</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-subtle);">
+              <td style="padding: 6px 0;"><strong>AI Smart Wait / Validate</strong></td>
+              <td style="padding: 6px 0; color: var(--text-secondary);">Any Vision model (Yes/No decision &mdash; even budget models work)</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-subtle);">
+              <td style="padding: 6px 0;"><strong>AI OCR</strong></td>
+              <td style="padding: 6px 0; color: var(--text-secondary);">Claude Sonnet 4.6, GPT-4o (best for complex layouts)</td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border-subtle);">
+              <td style="padding: 6px 0;"><strong>AI Autopilot</strong></td>
+              <td style="padding: 6px 0; color: var(--text-secondary);">Claude Sonnet 4.6 (fast), Claude Opus 4.6 (most capable)</td>
+            </tr>
+            <tr>
+              <td style="padding: 6px 0;"><strong>AI Instruction</strong></td>
+              <td style="padding: 6px 0; color: var(--text-secondary);">Apple Intelligence (free), Gemini Flash (budget), GPT-4o (quality)</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <hr class="glow-line">
+
+
+  <!-- Execution & Debugging Guide -->
+  <section class="section section--alt" id="execution-debug">
+    <div class="section__header reveal">
+      <div class="section__overline">Reference</div>
+      <h2 class="section__title">Execution &amp; Debugging</h2>
+    </div>
+
+    <div class="help-grid" style="max-width: 900px; margin: 0 auto;">
+      <div class="help-card reveal">
+        <div class="help-card__icon">&#x25B6;&#xFE0F;</div>
+        <div class="help-card__title">Running Macros</div>
+        <div class="help-card__desc">Click Play to run from the Start block. Active blocks highlight in green. Use Pause/Resume/Step for controlled execution. Speed adjustable from 0.1x to 5.0x.</div>
+      </div>
+
+      <div class="help-card reveal">
+        <div class="help-card__icon">&#x1F41E;</div>
+        <div class="help-card__title">Breakpoints</div>
+        <div class="help-card__desc">Right-click a block or press F9 to set a breakpoint (red dot). Execution pauses before the marked block, letting you inspect variables and step through.</div>
+      </div>
+
+      <div class="help-card reveal">
+        <div class="help-card__icon">&#x1F9EA;</div>
+        <div class="help-card__title">DryRun Mode</div>
+        <div class="help-card__desc">Test your macro logic without executing real mouse/keyboard actions. DryRun logs each step so you can verify flow, conditions, and variable values safely.</div>
+      </div>
+
+      <div class="help-card reveal">
+        <div class="help-card__icon">&#x1F4CA;</div>
+        <div class="help-card__title">Variable Watch</div>
+        <div class="help-card__desc">The Variables tab shows real-time values during execution. Reference variables in parameters with <code>{=variableName}</code> syntax. System variables: <code>{=_loopIndex}</code>, <code>{=_loopIteration}</code>.</div>
+      </div>
+
+      <div class="help-card reveal">
+        <div class="help-card__icon">&#x1F4DD;</div>
+        <div class="help-card__title">Custom Functions</div>
+        <div class="help-card__desc">Define reusable functions with FunctionDefine (Hat block), call with FunctionCall, return values with FunctionReturn (Cap block). Supports recursion up to 100 levels deep.</div>
+      </div>
+
+      <div class="help-card reveal">
+        <div class="help-card__icon">&#x23FA;</div>
+        <div class="help-card__title">Recording</div>
+        <div class="help-card__desc">Click Record to capture mouse clicks, keystrokes, and scrolling across any app. After recording, AI can optionally analyze clicks and suggest converting them to AI Click blocks for resilience.</div>
+      </div>
+    </div>
+  </section>
+
+
+  <hr class="glow-line">
+
+
+  <!-- Keyboard Shortcuts -->
+  <section class="section" id="shortcuts">
+    <div class="section__header reveal">
+      <div class="section__overline">Reference</div>
+      <h2 class="section__title">Keyboard Shortcuts</h2>
+    </div>
+
+    <div style="max-width: 600px; margin: 0 auto;">
+      <table class="comparison-table reveal" style="font-size: 13px;">
+        <tbody>
+          <tr><td><code>Cmd+Z</code></td><td>Undo</td></tr>
+          <tr><td><code>Cmd+Shift+Z</code></td><td>Redo</td></tr>
+          <tr><td><code>Cmd+C</code> / <code>Cmd+V</code></td><td>Copy / Paste blocks</td></tr>
+          <tr><td><code>Cmd+D</code></td><td>Duplicate selection</td></tr>
+          <tr><td><code>Cmd+A</code></td><td>Select all blocks</td></tr>
+          <tr><td><code>Delete</code></td><td>Delete selected blocks</td></tr>
+          <tr><td><code>Cmd+S</code></td><td>Save project</td></tr>
+          <tr><td><code>Cmd+Shift+S</code></td><td>Save as...</td></tr>
+          <tr><td><code>Cmd+F</code></td><td>Search blocks</td></tr>
+          <tr><td><code>Home</code></td><td>Zoom to fit</td></tr>
+          <tr><td><code>F9</code></td><td>Toggle breakpoint</td></tr>
+          <tr><td><code>Cmd+Shift+F</code></td><td>Collapse/expand C-blocks</td></tr>
+          <tr><td><code>Escape</code></td><td>Deselect all</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+
+  <hr class="glow-line">
+
+
   <!-- Block Editor Guide -->
   <section class="section" id="first-macro">
     <div class="section__header reveal">
