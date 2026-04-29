@@ -300,7 +300,7 @@
         <div class="help-card__icon">&#x1F680;</div>
         <div class="help-card__title">AI Autopilot</div>
         <div class="help-card__desc" style="max-width: none;">
-          <p style="margin-bottom: 8px;">Autonomous agent that takes full control of the screen to complete a described task. Powered by Anthropic Computer Use API (Claude Sonnet 4.6 / Opus 4.6). The AI captures screenshots, reasons about the next action, clicks, types, scrolls, and repeats until the task is done.</p>
+          <p style="margin-bottom: 8px;">Autonomous agent that takes full control of the screen to complete a described task. Dual-provider Computer Use: <strong>Anthropic</strong> (Claude Sonnet 4.6 / Opus 4.7) or <strong>OpenAI</strong> (GPT-5.5 / GPT-5.4 / computer-use-preview). The AI captures screenshots, reasons about the next action, clicks, types, scrolls, and repeats until the task is done.</p>
           <p style="margin-bottom: 8px;"><strong>Parameters:</strong> prompt (required), maxSteps (default: 30, max: 200), timeoutSeconds (default: 120, max: 600), outputVariable, provider, model</p>
           <p style="margin-bottom: 4px;"><strong>Prompt examples:</strong></p>
           <ul style="padding-left: 20px; color: var(--text-secondary);">
@@ -309,7 +309,7 @@
             <li><code>"Open System Settings and enable Dark Mode"</code></li>
             <li><code>"Open Safari, navigate to apple.com, and take a screenshot"</code></li>
           </ul>
-          <p style="margin-top: 8px; color: var(--text-tertiary); font-size: 11px;">Note: Requires Anthropic API key. Uses Sonnet by default (fast &amp; affordable). Switch to Opus in AI Settings for complex tasks. Cmd+Space (Spotlight) is unavailable via automation &mdash; the AI uses Launchpad to open apps.</p>
+          <p style="margin-top: 8px; color: var(--text-tertiary); font-size: 11px;">Note: Requires an Anthropic or OpenAI API key. Choose the default model in AI Settings (Sonnet 4.6 / Opus 4.7 / GPT-5.5 / GPT-5.4 / computer-use-preview). GPT-5.5 is Tier 1 friendly and fast; Sonnet 4.6 is reliable for complex layouts; computer-use-preview requires Tier 3+. Cmd+Space (Spotlight) is unavailable via automation &mdash; the AI uses Launchpad to open apps.</p>
         </div>
       </div>
 
@@ -370,7 +370,7 @@
             </tr>
             <tr style="border-bottom: 1px solid var(--border-subtle);">
               <td style="padding: 6px 0;"><strong>AI Autopilot</strong></td>
-              <td style="padding: 6px 0; color: var(--text-secondary);">Claude Sonnet 4.6 (fast), Claude Opus 4.6 (most capable)</td>
+              <td style="padding: 6px 0; color: var(--text-secondary);">GPT-5.5 (fast/Tier 1 OK), Claude Sonnet 4.6 (reliable), Claude Opus 4.7 / GPT-5.4 / computer-use-preview</td>
             </tr>
             <tr>
               <td style="padding: 6px 0;"><strong>AI Instruction</strong></td>
@@ -542,8 +542,9 @@
       <h2 class="section__title">AI Vision Setup Guide</h2>
       <p class="section__desc">
         AI Vision blocks (AI Click, AI Smart Wait, AI OCR, AI Validate, Bool AI Condition) require a
-        Vision-capable LLM provider. AI Autopilot is separate &mdash; it always uses Anthropic Computer Use API
-        and requires a dedicated Anthropic API key. Here's how to set everything up.
+        Vision-capable LLM provider. AI Autopilot is separate &mdash; it uses Computer Use APIs from
+        Anthropic (Sonnet/Opus) or OpenAI (GPT-5.5/5.4/computer-use-preview), so an Anthropic or
+        OpenAI API key is required. Here's how to set everything up.
       </p>
     </div>
 
@@ -558,7 +559,7 @@
           <ol style="padding-left: 20px;">
             <li style="margin-bottom: 8px;"><strong>AI Assistant</strong> &mdash; Provider for the chat panel (explain, diagnose, macro generation). Apple Intelligence is the default on macOS 26+ (free, on-device, no API key).</li>
             <li style="margin-bottom: 8px;"><strong>Default Provider</strong> &mdash; Used for all AI Vision blocks (AI Click, AI OCR, AI Smart Wait, AI Validate, Bool AI Condition). Requires a Vision-capable cloud provider.</li>
-            <li style="margin-bottom: 8px;"><strong>AI Autopilot</strong> &mdash; Dedicated to the Autopilot block. Always uses Anthropic Computer Use API (Sonnet or Opus). Requires an Anthropic API key.</li>
+            <li style="margin-bottom: 8px;"><strong>AI Autopilot</strong> &mdash; Dedicated to the Autopilot block. Choose a default model (Anthropic Sonnet 4.6 / Opus 4.7, or OpenAI GPT-5.5 / GPT-5.4 / computer-use-preview). Requires the corresponding provider's API key.</li>
             <li style="margin-bottom: 8px;"><strong>Provider Settings</strong> &mdash; Configure API keys, models, and temperature for each cloud provider (OpenAI, Anthropic, Gemini, Groq, Custom/Local LLM).</li>
             <li><strong>Self-Healing</strong> &mdash; When image/OCR operations fail, AI Vision automatically retries using natural language.</li>
           </ol>
@@ -644,8 +645,8 @@
           <tr>
             <td><strong>AI Autopilot</strong></td>
             <td><span class="cross">&#x274C;</span> No</td>
-            <td>Anthropic only</td>
-            <td>Computer Use API (Sonnet/Opus)</td>
+            <td>Anthropic or OpenAI</td>
+            <td>Computer Use API (Sonnet/Opus or GPT-5.5/5.4/computer-use-preview)</td>
           </tr>
           <tr>
             <td><strong>Bool AI Condition</strong></td>
@@ -681,14 +682,14 @@
           <tr>
             <td><strong>OpenAI</strong></td>
             <td><span class="check">&#x2705;</span> Yes</td>
-            <td><code>gpt-4o</code></td>
-            <td>Best balance of speed &amp; accuracy. Also: <code>gpt-4o-mini</code> (cheaper, less accurate)</td>
+            <td><code>gpt-5.5</code></td>
+            <td>Latest flagship (Tier 1+). Also: <code>gpt-5.5-mini</code> (cheap), <code>gpt-4o</code> (legacy)</td>
           </tr>
           <tr>
             <td><strong>Anthropic</strong></td>
             <td><span class="check">&#x2705;</span> Yes</td>
-            <td><code>claude-sonnet-4-20250514</code></td>
-            <td>Excellent accuracy. Also: <code>claude-haiku-4-5-20251001</code> (faster, cheaper)</td>
+            <td><code>claude-sonnet-4-6</code></td>
+            <td>Balanced performance. Also: <code>claude-opus-4-7</code> (top), <code>claude-haiku-4-5-20251001</code> (cheap)</td>
           </tr>
           <tr>
             <td><strong>Google Gemini</strong></td>
@@ -751,7 +752,7 @@
               <li>In the <strong>"Default Provider"</strong> section, select your provider (e.g., OpenAI, Gemini)</li>
               <li>Scroll down to <strong>"Provider Settings"</strong> and expand your chosen provider</li>
               <li>Paste your API key and click <strong>Test</strong> to verify</li>
-              <li>For AI Autopilot: expand <strong>Anthropic</strong> and enter the API key (required separately)</li>
+              <li>For AI Autopilot: pick a default model in the <strong>AI Autopilot</strong> section (Anthropic Sonnet/Opus or OpenAI GPT-5.5/5.4/computer-use-preview), then expand the matching provider in <strong>Provider Settings</strong> and enter the API key</li>
             </ol>
           </div>
         </div>

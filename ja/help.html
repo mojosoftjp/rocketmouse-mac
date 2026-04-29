@@ -150,7 +150,7 @@
         <div class="help-card__icon">&#x1F680;</div>
         <div class="help-card__title">AIオートパイロット</div>
         <div class="help-card__desc" style="max-width: none;">
-          <p style="margin-bottom: 8px;">画面を完全自律制御する自律エージェント。Anthropic Computer Use API（Claude Sonnet 4.6 / Opus 4.6）搭載。スクリーンショット撮影→推論→クリック・入力・スクロールを繰り返しタスク完了まで自動操作。</p>
+          <p style="margin-bottom: 8px;">画面を完全自律制御する自律エージェント。デュアルプロバイダのComputer Use: <strong>Anthropic</strong>（Claude Sonnet 4.6 / Opus 4.7）または <strong>OpenAI</strong>（GPT-5.5 / GPT-5.4 / computer-use-preview）。スクリーンショット撮影→推論→クリック・入力・スクロールを繰り返しタスク完了まで自動操作。</p>
           <p style="margin-bottom: 8px;"><strong>パラメータ:</strong> プロンプト（必須）、maxSteps（デフォルト: 30、最大: 200）、timeoutSeconds（デフォルト: 120、最大: 600）、outputVariable、provider、model</p>
           <p style="margin-bottom: 4px;"><strong>プロンプト例:</strong></p>
           <ul style="padding-left: 20px; color: var(--text-secondary);">
@@ -159,7 +159,7 @@
             <li><code>「システム設定を開いてダークモードを有効にして」</code></li>
             <li><code>「Safariを開いてapple.comにアクセスして」</code></li>
           </ul>
-          <p style="margin-top: 8px; color: var(--text-tertiary); font-size: 11px;">注意: Anthropic APIキーが必要。デフォルトはSonnet（高速・低コスト）。複雑なタスクにはAI設定でOpusに変更。</p>
+          <p style="margin-top: 8px; color: var(--text-tertiary); font-size: 11px;">注意: AnthropicまたはOpenAIのAPIキーが必要。AI設定でデフォルトモデルを選択（Sonnet 4.6 / Opus 4.7 / GPT-5.5 / GPT-5.4 / computer-use-preview）。GPT-5.5はTier 1から使えて高速、Sonnet 4.6は複雑なレイアウトに強い、computer-use-previewはTier 3以上が必要。Cmd+Space（Spotlight）は自動化非対応のため、AIはLaunchpad経由でアプリを起動。</p>
         </div>
       </div>
 
@@ -203,7 +203,7 @@
             <tr style="border-bottom: 1px solid var(--border-subtle);"><td style="padding: 6px 0;"><strong>AIクリック（低コスト）</strong></td><td style="padding: 6px 0; color: var(--text-secondary);">Gemini 2.5 Flash（無料: 250回/日）、Gemini 2.5 Flash-Lite（無料: 1,000回/日）、GPT-4o-mini</td></tr>
             <tr style="border-bottom: 1px solid var(--border-subtle);"><td style="padding: 6px 0;"><strong>AIスマート待機 / AI検証</strong></td><td style="padding: 6px 0; color: var(--text-secondary);">どのVisionモデルでもOK（Yes/No判定）</td></tr>
             <tr style="border-bottom: 1px solid var(--border-subtle);"><td style="padding: 6px 0;"><strong>AI OCR</strong></td><td style="padding: 6px 0; color: var(--text-secondary);">Claude Sonnet 4.6、GPT-4o（複雑なレイアウト向け）</td></tr>
-            <tr style="border-bottom: 1px solid var(--border-subtle);"><td style="padding: 6px 0;"><strong>AIオートパイロット</strong></td><td style="padding: 6px 0; color: var(--text-secondary);">Claude Sonnet 4.6（高速）、Claude Opus 4.6（最高性能）</td></tr>
+            <tr style="border-bottom: 1px solid var(--border-subtle);"><td style="padding: 6px 0;"><strong>AIオートパイロット</strong></td><td style="padding: 6px 0; color: var(--text-secondary);">GPT-5.5（高速・Tier 1 OK）、Claude Sonnet 4.6（信頼性）、Claude Opus 4.7 / GPT-5.4 / computer-use-preview</td></tr>
             <tr><td style="padding: 6px 0;"><strong>AI指示</strong></td><td style="padding: 6px 0; color: var(--text-secondary);">Apple Intelligence（無料）、Gemini Flash（低コスト）、GPT-4o（高品質）</td></tr>
           </table>
         </div>
@@ -274,7 +274,7 @@
     <div class="section__header reveal">
       <div class="section__overline" style="color: var(--accent-purple);">v2.0 新機能</div>
       <h2 class="section__title">AI Vision セットアップガイド</h2>
-      <p class="section__desc">AI Visionブロック（AIクリック、AIスマート待機、AI OCR、AI検証、AI条件判定）にはVision対応LLMプロバイダが必要です。AIオートパイロットは別枠で、Anthropic Computer Use API専用（Anthropic APIキーが必要）です。</p>
+      <p class="section__desc">AI Visionブロック（AIクリック、AIスマート待機、AI OCR、AI検証、AI条件判定）にはVision対応LLMプロバイダが必要です。AIオートパイロットは別枠で、Anthropic（Sonnet/Opus）またはOpenAI（GPT-5.5/5.4/computer-use-preview）のComputer Useを使用するため、対応するAPIキーが必要です。</p>
     </div>
 
     <div style="max-width: 900px; margin: 0 auto;">
@@ -286,7 +286,7 @@
           <ol style="padding-left: 20px;">
             <li style="margin-bottom: 8px;"><strong>AIアシスタント</strong> — チャットパネル用プロバイダ（説明・診断・マクロ生成）。macOS 26+ではApple Intelligenceがデフォルト（無料・オンデバイス・APIキー不要）。</li>
             <li style="margin-bottom: 8px;"><strong>デフォルトプロバイダ</strong> — 全AI Visionブロック共通（AIクリック、AI OCR、AIスマート待機、AI検証、AI条件判定）。Vision対応クラウドプロバイダが必要。</li>
-            <li style="margin-bottom: 8px;"><strong>AIオートパイロット</strong> — オートパイロットブロック専用。Anthropic Computer Use API（SonnetまたはOpus）を使用。Anthropic APIキーが必要。</li>
+            <li style="margin-bottom: 8px;"><strong>AIオートパイロット</strong> — オートパイロットブロック専用。AI設定でデフォルトモデルを選択（Anthropic Sonnet 4.6 / Opus 4.7、または OpenAI GPT-5.5 / GPT-5.4 / computer-use-preview）。対応するプロバイダのAPIキーが必要。</li>
             <li style="margin-bottom: 8px;"><strong>各プロバイダの設定</strong> — クラウドプロバイダごとのAPIキー・モデル・Temperature設定（OpenAI、Anthropic、Gemini、Groq、カスタム/ローカルLLM）。</li>
             <li><strong>セルフヒーリング</strong> — 画像/OCR操作が失敗した場合、AI Visionが自然言語で自動リトライ。</li>
           </ol>
@@ -373,8 +373,8 @@
           <tr>
             <td><strong>AIオートパイロット</strong></td>
             <td><span class="cross">&#x274C;</span> 非対応</td>
-            <td>Anthropicのみ</td>
-            <td>Computer Use API（Sonnet/Opus）</td>
+            <td>AnthropicまたはOpenAI</td>
+            <td>Computer Use API（Sonnet/Opus または GPT-5.5/5.4/computer-use-preview）</td>
           </tr>
           <tr>
             <td><strong>AI条件判定</strong></td>
@@ -409,14 +409,14 @@
           <tr>
             <td><strong>OpenAI</strong></td>
             <td><span class="check">&#x2705;</span> 対応</td>
-            <td><code>gpt-4o</code></td>
-            <td>速度と精度のバランスが最良。<code>gpt-4o-mini</code>（安価・精度やや低）も可</td>
+            <td><code>gpt-5.5</code></td>
+            <td>最新フラッグシップ（Tier 1から）。<code>gpt-5.5-mini</code>（安価）、<code>gpt-4o</code>（旧世代）も可</td>
           </tr>
           <tr>
             <td><strong>Anthropic</strong></td>
             <td><span class="check">&#x2705;</span> 対応</td>
-            <td><code>claude-sonnet-4-20250514</code></td>
-            <td>高精度。<code>claude-haiku-4-5-20251001</code>（高速・安価）も可</td>
+            <td><code>claude-sonnet-4-6</code></td>
+            <td>バランス型。<code>claude-opus-4-7</code>（最高性能）、<code>claude-haiku-4-5-20251001</code>（高速・安価）も可</td>
           </tr>
           <tr>
             <td><strong>Google Gemini</strong></td>
@@ -475,7 +475,7 @@
               <li><strong>「デフォルトプロバイダ」</strong>セクションでプロバイダを選択（例: OpenAI、Gemini）</li>
               <li><strong>「各プロバイダの設定」</strong>まで下にスクロールし、選んだプロバイダを展開</li>
               <li>APIキーを貼り付けて<strong>テスト</strong>をクリックして接続確認</li>
-              <li>AIオートパイロットを使う場合: <strong>Anthropic</strong>を展開してAPIキーを入力（別途必要）</li>
+              <li>AIオートパイロットを使う場合: <strong>AIオートパイロット</strong>セクションでデフォルトモデルを選択（Anthropic Sonnet/Opus または OpenAI GPT-5.5/5.4/computer-use-preview）し、<strong>各プロバイダの設定</strong>で対応するプロバイダを展開してAPIキーを入力</li>
             </ol>
           </div>
         </div>
