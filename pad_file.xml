@@ -21,9 +21,9 @@
 
   <Program_Info>
     <Program_Name>RocketMouse AI</Program_Name>
-    <Program_Version>2.0.6</Program_Version>
-    <Program_Release_Month>03</Program_Release_Month>
-    <Program_Release_Day>31</Program_Release_Day>
+    <Program_Version>2.1.0</Program_Version>
+    <Program_Release_Month>04</Program_Release_Month>
+    <Program_Release_Day>29</Program_Release_Day>
     <Program_Release_Year>2026</Program_Release_Year>
     <Program_Cost_Dollars>199</Program_Cost_Dollars>
     <Program_Cost_Other_Code>JPY</Program_Cost_Other_Code>
@@ -33,14 +33,14 @@
     <Program_Install_Support>No Install Support</Program_Install_Support>
     <Program_OS_Support>macOS 14+</Program_OS_Support>
     <Program_Language>English,Japanese</Program_Language>
-    <Program_Change_Info>Added AI Vision (Computer Use), Apple Intelligence integration, AI Autopilot, Self-Healing, 196 total operations. See release notes: https://mojosoftjp.github.io/rocketmouse/releases.html</Program_Change_Info>
+    <Program_Change_Info>Dual-provider AI Autopilot: OpenAI Computer Use (GPT-5.5/5.4/computer-use-preview) added alongside Anthropic (Sonnet 4.6/Opus 4.7). Unified default-model picker, safety check dialog, refreshed LLM model lists, Groq Vision via Llama 4 Scout. See release notes: https://mojosoftjp.github.io/rocketmouse-mac/releases.html</Program_Change_Info>
     <Program_Specific_Category>Productivity</Program_Specific_Category>
     <Program_Category_Class>Business::Other</Program_Category_Class>
     <Program_System_Requirements>macOS 14 (Sonoma) or later, Apple Silicon or Intel Mac</Program_System_Requirements>
     <File_Info>
-      <File_Size_Bytes>88364411</File_Size_Bytes>
-      <File_Size_K>86293</File_Size_K>
-      <File_Size_MB>84.27</File_Size_MB>
+      <File_Size_Bytes>88757101</File_Size_Bytes>
+      <File_Size_K>86677</File_Size_K>
+      <File_Size_MB>84.65</File_Size_MB>
     </File_Info>
     <Expire_Info>
       <Has_Expire_Info>Y</Has_Expire_Info>

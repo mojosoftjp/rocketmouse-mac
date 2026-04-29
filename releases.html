@@ -74,11 +74,30 @@
   <section class="section" style="padding-top: 0;">
     <div class="releases-timeline">
 
-      <!-- v2.0.1 -->
+      <!-- v2.1.0 -->
       <div class="release-item reveal">
         <div class="release-item__header">
-          <span class="release-item__version">v2.0.5</span>
+          <span class="release-item__version">v2.1.0</span>
           <span class="release-item__tag">Latest</span>
+          <span class="release-item__date">April 29, 2026</span>
+        </div>
+        <div class="release-item__body">
+          <p><strong>Dual-provider AI Autopilot — OpenAI Computer Use added</strong></p>
+          <ul>
+            <li><strong>OpenAI Computer Use</strong> — AI Autopilot now supports OpenAI Responses API (GPT-5.5 / GPT-5.4 / computer-use-preview) alongside Anthropic (Sonnet 4.6 / Opus 4.7). GPT-5.5 is fast, Tier 1 friendly, and ~25% faster than Sonnet 4.6 in field tests</li>
+            <li><strong>Unified default-model picker</strong> — AI Settings &gt; AI Autopilot now has a single dropdown listing all provider × model combinations. Picking a model also sets the default provider</li>
+            <li><strong>Safety check dialog</strong> — When OpenAI Computer Use requests permission for sensitive actions (irrelevant_domain, sensitive_domain, malicious_instructions), a dialog asks for explicit approval</li>
+            <li><strong>LLM model lists refreshed</strong> — All providers updated: OpenAI gpt-5.5/5.4/5.2/5.1, Anthropic Sonnet 4.6 / Opus 4.7 / Haiku 4.5, Gemini 3 series (Preview) + 2.5 stable, Groq Llama 4 Scout 17B (multimodal)</li>
+            <li><strong>Groq Vision support</strong> — Llama 4 Scout enables AI OCR/Click/SmartWait/Validate via Groq's ultra-fast inference</li>
+            <li><strong>Provider model dropdowns</strong> — Each provider's model is now selected from a curated list with descriptions, instead of free text</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- v2.0.x -->
+      <div class="release-item reveal">
+        <div class="release-item__header">
+          <span class="release-item__version">v2.0.6</span>
           <span class="release-item__date">April 1, 2026</span>
         </div>
         <div class="release-item__body">

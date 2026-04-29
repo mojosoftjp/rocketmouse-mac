@@ -76,11 +76,30 @@
   <section class="section" style="padding-top: 0;">
     <div class="releases-timeline">
 
-      <!-- v2.0.1 -->
+      <!-- v2.1.0 -->
       <div class="release-item reveal">
         <div class="release-item__header">
-          <span class="release-item__version">v2.0.5</span>
+          <span class="release-item__version">v2.1.0</span>
           <span class="release-item__tag">最新</span>
+          <span class="release-item__date">2026年4月29日</span>
+        </div>
+        <div class="release-item__body">
+          <p><strong>AIオートパイロットがデュアルプロバイダ化 — OpenAI Computer Use 追加</strong></p>
+          <ul>
+            <li><strong>OpenAI Computer Use</strong> — AIオートパイロットが OpenAI Responses API（GPT-5.5 / GPT-5.4 / computer-use-preview）に対応。Anthropic（Sonnet 4.6 / Opus 4.7）と並列で利用可能。GPT-5.5は高速・Tier 1から使え、Sonnet 4.6比で約25%速い実測値</li>
+            <li><strong>デフォルトモデル統合プルダウン</strong> — AI設定 &gt; AIオートパイロットが単一のドロップダウンに。プロバイダ × モデルの全組み合わせから選択でき、選んだモデルがそのままデフォルトプロバイダになります</li>
+            <li><strong>セーフティチェックダイアログ</strong> — OpenAI Computer Useが機微な操作（irrelevant_domain / sensitive_domain / malicious_instructions）の許可を求めた場合、ダイアログで明示的承認を確認</li>
+            <li><strong>LLMモデル一覧 全プロバイダ更新</strong> — OpenAI gpt-5.5/5.4/5.2/5.1、Anthropic Sonnet 4.6 / Opus 4.7 / Haiku 4.5、Gemini 3系（Preview）+ 2.5安定版、Groq Llama 4 Scout 17B（マルチモーダル）</li>
+            <li><strong>Groq Vision 対応</strong> — Llama 4 Scoutで AI OCR/クリック/スマート待機/検証 がGroqの超高速推論で利用可能</li>
+            <li><strong>プロバイダ毎のモデル選択UI</strong> — フリーテキスト入力からキュレーションされたリスト + 説明文のドロップダウンに変更</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- v2.0.x -->
+      <div class="release-item reveal">
+        <div class="release-item__header">
+          <span class="release-item__version">v2.0.6</span>
           <span class="release-item__date">2026年4月1日</span>
         </div>
         <div class="release-item__body">
