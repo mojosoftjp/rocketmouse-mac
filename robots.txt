@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://mojosoftjp.github.io/rocketmouse/sitemap.xml
+Sitemap: https://mojosoftjp.github.io/rocketmouse-mac/sitemap.xml

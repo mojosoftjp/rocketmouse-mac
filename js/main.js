@@ -3,24 +3,7 @@
    Scroll animations, nav behavior, interactions
    ============================================================ */
 
-/* --- Auto language redirect (EN → JA) --- */
-(function () {
-  // Only redirect on EN pages (not already in /ja/)
-  if (window.location.pathname.indexOf('/ja/') !== -1) return;
-
-  // Skip if user has manually chosen a language
-  if (localStorage.getItem('rm_lang_override')) return;
-
-  // Check browser language
-  var lang = navigator.language || navigator.userLanguage || '';
-  if (lang.substring(0, 2).toLowerCase() === 'ja') {
-    // Map current EN page to JA equivalent
-    var path = window.location.pathname;
-    var base = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
-    var jaUrl = path.substring(0, path.lastIndexOf('/') + 1) + 'ja/' + base;
-    window.location.replace(jaUrl);
-  }
-})();
+/* Language is selected through explicit links. */
 
 document.addEventListener('DOMContentLoaded', () => {
   initLangSwitch();
